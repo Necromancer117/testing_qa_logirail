@@ -4,11 +4,18 @@
 - Carlos Johan  = Joheartless 
 - Albert Juan Rubio = Necromancer117 
 
-## Proyecto: 
+## Proyecto: Maquina vendedora de billetes de tre
 
 
 
-### Autors
+### Descripcion:
+El usuario interactúa con la máquina para comprar billetes de tren, escogiendo la ruta destino. Tendrá que pagar con tarjeta para poder obtener el billete.
+
+
+![alt text](image.png)
+
+
+#### Autors
 
 Los autores de este proyecto son los siguientes:
 
