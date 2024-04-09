@@ -4,7 +4,7 @@
 - Carlos Johan  = Joheartless 
 - Albert Juan Rubio = Necromancer117 
 
-## Proyecto: Maquina vendedora de billetes de tre
+## Proyecto: Maquina vendedora de billetes de tren
 
 
 
