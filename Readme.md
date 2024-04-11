@@ -27,17 +27,21 @@ Con miras al futuro, estamos comprometidos con la expansión de nuestra platafor
  - Seguridad y Comodidad en Pagos: Implementa un sistema de pago diversificado que acepta múltiples formas de pago electrónico, excluyendo el efectivo, para optimizar la seguridad y agilizar el proceso de compra.
 
  - Acceso Móvil en el Futuro: Se planifica la expansión de la plataforma para incluir una aplicación móvil, lo que ofrecerá un acceso aún más conveniente y adaptable para gestionar reservas y viajes en tren desde cualquier lugar y en cualquier momento.
- 
-<!-- 
- #### Sistema de usuarios
-![alt text](image.png)
 
- #### Trabajador
-![alt text](image.png)
 
-#### Trabajador
-![alt text](image.png) -->
+ #### Pasajero
+![alt text](Pasajero.png)
 
+ #### BasicoMaquinaBilletes
+![alt text](BasicoMaquinaBilletes.png)
+
+#### Taquillero casdo de uso
+
+![alt text](Taquillerocasdodeuso.png) 
+
+
+ #### Renfe casos de uso
+ ![alt text](Renfecasosdeuso.png)
 
 ##### Autors
 
