@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<requirement-specification>
+<req_spec title="Requisitos funcionales"  doc_id="RF"  >
+	<revision><![CDATA[1]]></revision>
+	<type><![CDATA[1]]></type>
+	<node_order><![CDATA[0]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[<p>Listado de los requisitos funcionales del proyecto.</p>]]></scope>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Especificacion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Especificacion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+<req_spec title="Subsistema de taquillero"  doc_id="ST 1"  >
+	<revision><![CDATA[1]]></revision>
+	<type><![CDATA[1]]></type>
+	<node_order><![CDATA[2]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[]]></scope>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Especificacion]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Especificacion]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+		</custom_fields>
+	<requirement>
+		<docid><![CDATA[RF 2.1]]></docid>
+		<title><![CDATA[Reponer papel de billetes]]></title>
+		<version>1</version>
+		<revision>1</revision>
+		<node_order>1</node_order>
+		<description><![CDATA[<p>El taquillero&nbsp;deber&aacute;&nbsp;reponer el papel de impresi&oacute;n de los billetes de la&nbsp;m&aacute;quina.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[2]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+	<requirement>
+		<docid><![CDATA[RF 2.2]]></docid>
+		<title><![CDATA[Recaudacion]]></title>
+		<version>1</version>
+		<revision>1</revision>
+		<node_order>2</node_order>
+		<description><![CDATA[<p>El taquillero debe reponer el dinero en&nbsp;met&aacute;lico&nbsp;y recoger las ganancias.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[2]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+</req_spec>
+</req_spec>
+<req_spec title="Requisitos no funcionales"  doc_id="RNF"  >
+	<revision><![CDATA[1]]></revision>
+	<type><![CDATA[1]]></type>
+	<node_order><![CDATA[1]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[<p>Listado de requisitos no funcionales del proyecto</p>]]></scope>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Especificacion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Especificacion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+<req_spec title="Subsistema del punto de venta"  doc_id="SP 2"  >
+	<revision><![CDATA[4]]></revision>
+	<type><![CDATA[1]]></type>
+	<node_order><![CDATA[1]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[<p>Listado de requisitos no funcionales del punto de venta.</p>]]></scope>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Especificacion]]></name>
+			<value><![CDATA[Baja]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Especificacion]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+		</custom_fields>
+	<requirement>
+		<docid><![CDATA[RNF 1.1]]></docid>
+		<title><![CDATA[Accesibilidad]]></title>
+		<version>1</version>
+		<revision>2</revision>
+		<node_order>0</node_order>
+		<description><![CDATA[<p>La interfaz debe ser intuitiva y&nbsp;f&aacute;cil&nbsp;de navegar.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[4]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[El usuario promedio debe poder navegar sin problemas por el sistema.]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+	<requirement>
+		<docid><![CDATA[RNF 1.2]]></docid>
+		<title><![CDATA[Gestion de informacion]]></title>
+		<version>1</version>
+		<revision>2</revision>
+		<node_order>1</node_order>
+		<description><![CDATA[<p>Se debe guardar la informaci&oacute;n del usuario para su gestion.</p>
+
+<p>Nombre, DNI/NIE, Trayecto, hora, numero de asiento (si lo hubiese).</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[2]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[En la red de la empresa debe existir un registro actualizado con la información de los pasajeros.]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+	<requirement>
+		<docid><![CDATA[RNF 1.3]]></docid>
+		<title><![CDATA[Conexion de red]]></title>
+		<version>1</version>
+		<revision>2</revision>
+		<node_order>2</node_order>
+		<description><![CDATA[<p>La maquinaria debe estar conectada a la red para comunicarse con la red de la empresa y con los medios de pago.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[3]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[La maquina debe poder comunicarse con la red de la empresa y con los medios de pago.]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+	<requirement>
+		<docid><![CDATA[RNF 1.4]]></docid>
+		<title><![CDATA[Acceso fisico]]></title>
+		<version>1</version>
+		<revision>3</revision>
+		<node_order>3</node_order>
+		<description><![CDATA[<p>La&nbsp;m&aacute;quina&nbsp;deber&aacute;&nbsp;tener cierta seguridad contra el acceso&nbsp;f&iacute;sico&nbsp;al interior de esta.<br />
+<br />
+Solo el personal autorizado&nbsp;deber&iacute;a&nbsp;poder acceder.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[2]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[Un individuo no autorizado no debe ser capaz de acceder al interior del punto de venta y el acceso a este debe resistir intentos de intrusión.]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+<req_spec title="historias de usuario"  doc_id="RNF 1 HU historias de usuario"  >
+	<revision><![CDATA[1]]></revision>
+	<type><![CDATA[1]]></type>
+	<node_order><![CDATA[4]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[]]></scope>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Especificacion]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Especificacion]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+		</custom_fields>
+	<requirement>
+		<docid><![CDATA[RNF 1 HU 1]]></docid>
+		<title><![CDATA[Visibilidad]]></title>
+		<version>1</version>
+		<revision>2</revision>
+		<node_order>1</node_order>
+		<description><![CDATA[<p>Como usuario quiero que la botoneria tenga el tama&ntilde;o suficiente.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[3]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[Un usuario con problemas de visión debe ser capaz de usar el punto de venta.]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+</req_spec>
+	<requirement>
+		<docid><![CDATA[RNF 1.5]]></docid>
+		<title><![CDATA[Tiempo de respuesta]]></title>
+		<version>1</version>
+		<revision>1</revision>
+		<node_order>5</node_order>
+		<description><![CDATA[<p>La&nbsp;interfaz&nbsp;debe mostrar resultados en un tiempo de respuesta&nbsp;adecuado.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[3]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[La interfaz no tarda mas de cinco segundos en cargar la respuesta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+</req_spec>
+<req_spec title="Subsistema de taquillero"  doc_id="ST 2"  >
+	<revision><![CDATA[1]]></revision>
+	<type><![CDATA[1]]></type>
+	<node_order><![CDATA[2]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[]]></scope>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Especificacion]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Especificacion]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+		</custom_fields>
+	<requirement>
+		<docid><![CDATA[RNF 2.1]]></docid>
+		<title><![CDATA[Seguridad]]></title>
+		<version>1</version>
+		<revision>1</revision>
+		<node_order>1</node_order>
+		<description><![CDATA[<p>El taquillero debera mantener el nivel de seguridad adequado al recoger la recaudaci&oacute;n de la maquina y reponer el papel de los billetes.</p>
+
+<p>Solo el personal autorizado deberia tener acceso a la maquina y a la recaudaci&oacute;n.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[3]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+	<requirement>
+		<docid><![CDATA[RNF 2.2]]></docid>
+		<title><![CDATA[Mantenimiento]]></title>
+		<version>1</version>
+		<revision>3</revision>
+		<node_order>2</node_order>
+		<description><![CDATA[<p>En caso de&nbsp;aver&iacute;a&nbsp;o&nbsp;error,&nbsp;el taquillero&nbsp;deber&aacute;&nbsp;avisar al servicio de&nbsp;mantenimiento&nbsp;del punto de venta.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[3]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[Si hay una avería se avisa a mantenimiento.]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+</req_spec>
+<req_spec title="Subsistemas de mantenimiento"  doc_id="SM 2"  >
+	<revision><![CDATA[1]]></revision>
+	<type><![CDATA[1]]></type>
+	<node_order><![CDATA[3]]></node_order>
+	<total_req><![CDATA[0]]></total_req>
+	<scope><![CDATA[]]></scope>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Especificacion]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Especificacion]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+		</custom_fields>
+	<requirement>
+		<docid><![CDATA[RNF 3.1]]></docid>
+		<title><![CDATA[Instalacion]]></title>
+		<version>1</version>
+		<revision>1</revision>
+		<node_order>1</node_order>
+		<description><![CDATA[<p>El equipo de mantenimiento&nbsp;debe&nbsp;instalar nuevos puntos de venta cuando se les necesite.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[3]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Baja]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[C]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[El nuevo punto de venta está en su lugar y es funcional]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+	<requirement>
+		<docid><![CDATA[RNF 3.2]]></docid>
+		<title><![CDATA[Reparar]]></title>
+		<version>1</version>
+		<revision>1</revision>
+		<node_order>2</node_order>
+		<description><![CDATA[<p>El equipo de mantenimiento debe reparar y mantener el punto de venta en caso de que sea necesario.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[3]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[El punto de venta vuelve a ser funcional.]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+</req_spec>
+</req_spec>
+</requirement-specification>
