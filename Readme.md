@@ -31,6 +31,8 @@ Con miras al futuro, estamos comprometidos con la expansión de nuestra platafor
  #### BasicoMaquinaBilletes
 ![alt text](BasicoMaquinaBilletes.png)
 
+ #### Pasajero casos de uso
+
 ![alt text](Pasajero.png)
 
 #### Taquillero casdo de uso
