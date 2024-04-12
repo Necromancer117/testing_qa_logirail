@@ -28,17 +28,20 @@ Con miras al futuro, estamos comprometidos con la expansión de nuestra platafor
 
  - Acceso Móvil en el Futuro: Se planifica la expansión de la plataforma para incluir una aplicación móvil, lo que ofrecerá un acceso aún más conveniente y adaptable para gestionar reservas y viajes en tren desde cualquier lugar y en cualquier momento.
 
-
- #### Pasajero
-![alt text](Pasajero.png)
+ #### BasicoMaquinaBilletes
+![alt text](BasicoMaquinaBilletes.png)
 
  #### BasicoMaquinaBilletes
 ![alt text](BasicoMaquinaBilletes.png)
+
+![alt text](Pasajero.png)
 
 #### Taquillero casdo de uso
 
 ![alt text](Taquillerocasdodeuso.png) 
 
+ #### Mantenimiento
+![alt text](Mantenimiento_casos_de_uso.png)
 
  #### Renfe casos de uso
  ![alt text](Renfecasosdeuso.png)
