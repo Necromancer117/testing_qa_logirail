@@ -32,132 +32,6 @@
 			<value><![CDATA[NV]]></value>
 			</custom_field>
 		</custom_fields>
-	<requirement>
-		<docid><![CDATA[reqf-001]]></docid>
-		<title><![CDATA[Pasajeros]]></title>
-		<version>1</version>
-		<revision>1</revision>
-		<node_order>0</node_order>
-		<description><![CDATA[<ol>
-	<li>
-	<p><strong>Sacar Billete</strong></p>
-
-	<ul>
-		<li>El sistema debe permitir a los usuarios seleccionar su destino y fecha de viaje.</li>
-		<li>El sistema debe calcular el precio del billete en funci&oacute;n del destino y la tarifa aplicable.</li>
-		<li>El sistema debe ofrecer opciones de pago.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Imprimir Billete</strong></p>
-
-	<ul>
-		<li>El sistema debe proporcionar una opci&oacute;n para imprimir el billete despu&eacute;s de la compra.</li>
-		<li>El sistema debe generar un billete con todos los detalles necesarios del viaje.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Consultar Ruta</strong></p>
-
-	<ul>
-		<li>El sistema debe permitir a los usuarios consultar las rutas de tren disponibles.</li>
-		<li>El sistema debe mostrar el itinerario, incluyendo paradas intermedias y tiempos de tr&aacute;nsito.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Consultar Horario</strong></p>
-
-	<ul>
-		<li>El sistema debe proporcionar una funcionalidad para consultar los horarios de los trenes.</li>
-		<li>El sistema debe actualizar y mostrar los horarios en tiempo real, incluyendo retrasos o cancelaciones.</li>
-	</ul>
-	</li>
-</ol>]]></description>
-		<status><![CDATA[D]]></status>
-		<type><![CDATA[2]]></type>
-		<expected_coverage><![CDATA[1]]></expected_coverage>
-		<custom_fields>
-			<custom_field>
-			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Ejecucion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-		</custom_fields>
-
-	</requirement>
-	<requirement>
-		<docid><![CDATA[reqf-002]]></docid>
-		<title><![CDATA[Maquina auto venta]]></title>
-		<version>1</version>
-		<revision>1</revision>
-		<node_order>1</node_order>
-		<description><![CDATA[<ol>
-	<li>
-	<p><strong>Pide</strong></p>
-
-	<ul>
-		<li>El sistema debe permitir a los usuarios seleccionar y solicitar la compra de billetes de tren.</li>
-		<li>El sistema debe ofrecer diferentes opciones de trayecto, clase y tarifa.</li>
-		<li>&nbsp;</li>
-	</ul>
-	</li>
-	<li><strong>Informa a RENFE</strong>
-	<ul>
-		<li>El sistema debe recopilar y enviar autom&aacute;ticamente informaci&oacute;n detallada sobre las ventas de billetes y las interacciones de los usuarios a RENFE.</li>
-		<li>El sistema debe proporcionar datos para an&aacute;lisis estad&iacute;stico, como las horas pico de compra, las rutas m&aacute;s populares y tendencias de compra para la optimizaci&oacute;n de recursos y servicios.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Verifica</strong></p>
-
-	<ul>
-		<li>El sistema debe verificar la validez de los m&eacute;todos de pago antes de finalizar la compra de billetes.</li>
-		<li>El sistema debe confirmar la compra y emitir un recibo o comprobante.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Mantiene</strong></p>
-
-	<ul>
-		<li>El sistema debe realizar un seguimiento del inventario de billetes y se&ntilde;alar cuando es necesario reponer.</li>
-		<li>El sistema debe registrar y reportar errores o problemas para el mantenimiento.</li>
-	</ul>
-	</li>
-</ol>]]></description>
-		<status><![CDATA[D]]></status>
-		<type><![CDATA[2]]></type>
-		<expected_coverage><![CDATA[1]]></expected_coverage>
-		<custom_fields>
-			<custom_field>
-			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Ejecucion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-		</custom_fields>
-
-	</requirement>
 <req_spec title="Historias de usuario"  doc_id="RF 1 HU"  >
 	<revision><![CDATA[2]]></revision>
 	<type><![CDATA[1]]></type>
@@ -174,94 +48,6 @@
 			<value><![CDATA[NV]]></value>
 			</custom_field>
 		</custom_fields>
-	<requirement>
-		<docid><![CDATA[hdu-001]]></docid>
-		<title><![CDATA[Pasajero]]></title>
-		<version>1</version>
-		<revision>1</revision>
-		<node_order>1</node_order>
-		<description><![CDATA[<ol>
-	<li>
-	<p><strong>Emitir Billete:</strong> Como pasajero, quiero poder emitir un billete para asegurarme de tener un asiento reservado en el transporte de mi elecci&oacute;n.</p>
-	</li>
-	<li>
-	<p><strong>Imprimir Billete:</strong> Como pasajero, quiero poder imprimir mi billete para tener un comprobante f&iacute;sico de mi compra en caso de que sea necesario.</p>
-	</li>
-	<li>
-	<p><strong>&nbsp;Consultar Ruta:</strong> Como pasajero, quiero consultar las rutas disponibles para planificar mi viaje de manera eficiente.</p>
-	</li>
-	<li>
-	<p><strong>Consultar Horario:</strong> Como pasajero, quiero poder consultar los horarios del transporte para organizar mi agenda de acuerdo con los tiempos de salida y llegada.</p>
-	</li>
-</ol>
-
-<p>&nbsp;</p>]]></description>
-		<status><![CDATA[D]]></status>
-		<type><![CDATA[3]]></type>
-		<expected_coverage><![CDATA[1]]></expected_coverage>
-		<custom_fields>
-			<custom_field>
-			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Ejecucion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-		</custom_fields>
-
-	</requirement>
-	<requirement>
-		<docid><![CDATA[hdu-002]]></docid>
-		<title><![CDATA[Maquina auto venta]]></title>
-		<version>1</version>
-		<revision>1</revision>
-		<node_order>2</node_order>
-		<description><![CDATA[<ol>
-	<li>
-	<p><strong>Usuario Pide:</strong> Como usuario, quiero poder seleccionar opciones de compra en la m&aacute;quina de billetes para adquirir un pasaje que se ajuste a mi viaje.</p>
-	</li>
-	<li>
-	<p><strong>Informa a RENFE:</strong> Como sistema de ventas de billetes de tren, necesito registrar y proporcionar informaci&oacute;n detallada sobre las compras de billetes y las preferencias de viaje de los pasajeros a RENFE, para que la compa&ntilde;&iacute;a pueda utilizar estos datos para mejorar el servicio y la planificaci&oacute;n de rutas.</p>
-	</li>
-	<li>
-	<p><strong>&nbsp;Verifica:</strong> Como usuario, quiero que la m&aacute;quina de billetes verifique mi pago&nbsp;para asegurarme de que la transacci&oacute;n se ha completado correctamente.</p>
-	</li>
-	<li>
-	<p><strong>&nbsp;Mantiene:</strong> Como personal de mantenimiento, necesito que la m&aacute;quina de billetes registre y mantenga un historial de transacciones y problemas t&eacute;cnicos para garantizar su correcto funcionamiento y realizar reparaciones efectivas.</p>
-	</li>
-</ol>]]></description>
-		<status><![CDATA[D]]></status>
-		<type><![CDATA[3]]></type>
-		<expected_coverage><![CDATA[1]]></expected_coverage>
-		<custom_fields>
-			<custom_field>
-			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Ejecucion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-		</custom_fields>
-
-	</requirement>
 	<requirement>
 		<docid><![CDATA[RF 1 HU 1.1]]></docid>
 		<title><![CDATA[Sacar billete]]></title>
@@ -503,53 +289,6 @@
 		</custom_fields>
 
 	</requirement>
-	<requirement>
-		<docid><![CDATA[reqf-003]]></docid>
-		<title><![CDATA[Taquillero]]></title>
-		<version>1</version>
-		<revision>1</revision>
-		<node_order>3</node_order>
-		<description><![CDATA[<ol>
-	<li>
-	<p><strong>Recaudaci&oacute;n</strong></p>
-
-	<ul>
-		<li>El sistema debe permitir a los empleados de la compa&ntilde;&iacute;a de trenes recoger y contabilizar el dinero recaudado de la venta de billetes de las m&aacute;quinas.</li>
-		<li>El sistema debe registrar la cantidad de dinero recaudada y proporcionar un resumen para la auditor&iacute;a.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Reposici&oacute;n de Billetes</strong></p>
-
-	<ul>
-		<li>El sistema debe permitir a los empleados reponer el stock de billetes en las m&aacute;quinas cuando sea necesario.</li>
-		<li>El sistema debe llevar un registro de la cantidad de billetes reponidos y el tiempo de reposici&oacute;n para mantenimiento y referencia futura.</li>
-	</ul>
-	</li>
-</ol>]]></description>
-		<status><![CDATA[D]]></status>
-		<type><![CDATA[2]]></type>
-		<expected_coverage><![CDATA[1]]></expected_coverage>
-		<custom_fields>
-			<custom_field>
-			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Ejecucion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-		</custom_fields>
-
-	</requirement>
 </req_spec>
 </req_spec>
 <req_spec title="Requisitos no funcionales"  doc_id="RNF"  >
@@ -647,74 +386,11 @@
 
 	</requirement>
 	<requirement>
-		<docid><![CDATA[reqnf-001]]></docid>
-		<title><![CDATA[Pasajeros]]></title>
-		<version>1</version>
-		<revision>1</revision>
-		<node_order>1</node_order>
-		<description><![CDATA[<ol>
-	<li>
-	<p><strong>Sacar Billete</strong></p>
-
-	<ul>
-		<li>Usabilidad: La interfaz de usuario debe ser intuitiva y f&aacute;cil de usar para personas de todas las edades y habilidades.</li>
-		<li>Rendimiento: La emisi&oacute;n de billetes debe completarse en no m&aacute;s de 30 segundos despu&eacute;s de que se haya proporcionado la informaci&oacute;n de pago.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Imprimir Billete</strong></p>
-
-	<ul>
-		<li>Fiabilidad: El sistema de impresi&oacute;n debe funcionar correctamente al menos el 99% del tiempo.</li>
-		<li>Calidad: Los billetes impresos deben ser legibles y resistentes a desgarros o da&ntilde;os causados por el agua.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Consultar Ruta</strong></p>
-
-	<ul>
-		<li>Accesibilidad: La funci&oacute;n de consulta de ruta debe proporcionar opciones para personas con discapacidad visual o auditiva.</li>
-		<li>Actualizaci&oacute;n de datos: La informaci&oacute;n de la ruta debe actualizarse en tiempo real y reflejar cualquier cambio o interrupci&oacute;n en el servicio inmediatamente.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Consultar Horario</strong></p>
-
-	<ul>
-		<li>Disponibilidad: La consulta de horarios debe estar disponible 24/7, con un tiempo de inactividad programado no superior al 0.5% del tiempo total.</li>
-		<li>Precisi&oacute;n: Los horarios mostrados deben tener una precisi&oacute;n del 100% con los horarios programados y actualizados del sistema de trenes.</li>
-	</ul>
-	</li>
-</ol>]]></description>
-		<status><![CDATA[D]]></status>
-		<type><![CDATA[5]]></type>
-		<expected_coverage><![CDATA[1]]></expected_coverage>
-		<custom_fields>
-			<custom_field>
-			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Ejecucion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-		</custom_fields>
-
-	</requirement>
-	<requirement>
 		<docid><![CDATA[RNF 1.3]]></docid>
 		<title><![CDATA[Conexion de red]]></title>
 		<version>1</version>
 		<revision>3</revision>
-		<node_order>2</node_order>
+		<node_order>3</node_order>
 		<description><![CDATA[<p>La maquinaria debe estar conectada a la red para comunicarse con la red de la empresa y con los medios de pago.</p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
@@ -740,90 +416,11 @@
 
 	</requirement>
 	<requirement>
-		<docid><![CDATA[reqnf-002]]></docid>
-		<title><![CDATA[Maquina auto venta]]></title>
-		<version>1</version>
-		<revision>1</revision>
-		<node_order>2</node_order>
-		<description><![CDATA[<ol>
-	<li>
-	<p><strong>Seguridad</strong></p>
-
-	<ul>
-		<li>El sistema debe asegurar la protecci&oacute;n de los datos personales de los usuarios y cumplir con las regulaciones de privacidad pertinentes.</li>
-		<li>La comunicaci&oacute;n de datos entre la m&aacute;quina y Renfe debe estar encriptada para prevenir accesos no autorizados.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Confiabilidad</strong></p>
-
-	<ul>
-		<li>La m&aacute;quina debe tener una tasa de disponibilidad m&iacute;nima del 99%, asegurando que est&eacute; operativa la mayor parte del tiempo.</li>
-		<li>Debe contar con un sistema de respaldo para preservar la informaci&oacute;n y las operaciones en caso de fallo.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Usabilidad</strong></p>
-
-	<ul>
-		<li>La interfaz de usuario de la m&aacute;quina debe ser intuitiva y accesible para usuarios de todas las edades y capacidades.</li>
-		<li>La m&aacute;quina debe ofrecer instrucciones claras y asistencia en m&uacute;ltiples idiomas.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Mantenibilidad</strong></p>
-
-	<ul>
-		<li>El sistema debe permitir un f&aacute;cil mantenimiento y actualizaci&oacute;n del software y el hardware.</li>
-		<li>La m&aacute;quina debe ser capaz de auto-diagnosticarse y alertar a los t&eacute;cnicos de Renfe de problemas espec&iacute;ficos para facilitar una r&aacute;pida reparaci&oacute;n.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Rendimiento</strong></p>
-
-	<ul>
-		<li>La m&aacute;quina debe ser capaz de manejar un alto volumen de transacciones diarias sin retrasos significativos.</li>
-		<li>Los tiempos de respuesta para la emisi&oacute;n e impresi&oacute;n de billetes deben ser r&aacute;pidos para mantener una experiencia de usuario fluida.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Informa a Renfe</strong></p>
-
-	<ul>
-		<li>La m&aacute;quina debe recopilar datos de operaci&oacute;n y transacciones para informar a Renfe, facilitando la toma de decisiones basada en datos.</li>
-		<li>Debe generar informes peri&oacute;dicos de ventas, demanda y cualquier problema t&eacute;cnico que se haya registrado.</li>
-	</ul>
-	</li>
-</ol>]]></description>
-		<status><![CDATA[D]]></status>
-		<type><![CDATA[5]]></type>
-		<expected_coverage><![CDATA[1]]></expected_coverage>
-		<custom_fields>
-			<custom_field>
-			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Ejecucion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-		</custom_fields>
-
-	</requirement>
-	<requirement>
 		<docid><![CDATA[RNF 1.4]]></docid>
 		<title><![CDATA[Acceso fisico]]></title>
 		<version>1</version>
 		<revision>4</revision>
-		<node_order>3</node_order>
+		<node_order>5</node_order>
 		<description><![CDATA[<p>La&nbsp;m&aacute;quina&nbsp;deber&aacute;&nbsp;tener cierta seguridad contra el acceso&nbsp;f&iacute;sico&nbsp;al interior de esta.<br />
 <br />
 Solo el personal autorizado&nbsp;deber&iacute;a&nbsp;poder acceder.</p>]]></description>
@@ -855,7 +452,7 @@ Solo el personal autorizado&nbsp;deber&iacute;a&nbsp;poder acceder.</p>]]></desc
 		<title><![CDATA[Tiempo de respuesta]]></title>
 		<version>1</version>
 		<revision>2</revision>
-		<node_order>4</node_order>
+		<node_order>6</node_order>
 		<description><![CDATA[<p>La&nbsp;interfaz&nbsp;debe mostrar resultados en un tiempo de respuesta&nbsp;adecuado.</p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
@@ -883,7 +480,7 @@ Solo el personal autorizado&nbsp;deber&iacute;a&nbsp;poder acceder.</p>]]></desc
 <req_spec title="historias de usuario"  doc_id="RNF 1 HU"  >
 	<revision><![CDATA[2]]></revision>
 	<type><![CDATA[1]]></type>
-	<node_order><![CDATA[5]]></node_order>
+	<node_order><![CDATA[7]]></node_order>
 	<total_req><![CDATA[0]]></total_req>
 	<scope><![CDATA[]]></scope>
 		<custom_fields>
@@ -1028,73 +625,6 @@ Solo el personal autorizado&nbsp;deber&iacute;a&nbsp;poder acceder.</p>]]></desc
 			<custom_field>
 			<name><![CDATA[Criterios de aceptacion]]></name>
 			<value><![CDATA[Si hay una avería se avisa a mantenimiento.]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Ejecucion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-		</custom_fields>
-
-	</requirement>
-	<requirement>
-		<docid><![CDATA[reqnf-003]]></docid>
-		<title><![CDATA[Taquillero]]></title>
-		<version>1</version>
-		<revision>1</revision>
-		<node_order>3</node_order>
-		<description><![CDATA[<ol>
-	<li>
-	<p><strong>Disponibilidad</strong></p>
-
-	<ul>
-		<li>La m&aacute;quina debe tener una disponibilidad alta, idealmente del 99%, para asegurar que los usuarios pueden comprar y recoger billetes en todo momento.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Seguridad</strong></p>
-
-	<ul>
-		<li>Las transacciones financieras y el almacenamiento de billetes deben ser seguros para evitar robos y fraudes.</li>
-		<li>La m&aacute;quina debe contar con medidas de seguridad robustas para proteger el dinero y los datos de los usuarios.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Fiabilidad</strong></p>
-
-	<ul>
-		<li>El sistema de recaudaci&oacute;n y reposici&oacute;n de billetes debe ser fiable, con un margen de error m&iacute;nimo, para garantizar la confianza en el sistema.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Mantenibilidad</strong></p>
-
-	<ul>
-		<li>Las m&aacute;quinas deben ser f&aacute;ciles de mantener, permitiendo una r&aacute;pida recaudaci&oacute;n y reposici&oacute;n de billetes sin necesidad de herramientas o conocimientos t&eacute;cnicos especializados.</li>
-	</ul>
-	</li>
-	<li>
-	<p><strong>Eficiencia</strong></p>
-
-	<ul>
-		<li>El proceso de recaudaci&oacute;n y reposici&oacute;n debe ser eficiente en tiempo, minimizando la interrupci&oacute;n del servicio a los usuarios.</li>
-	</ul>
-	</li>
-</ol>]]></description>
-		<status><![CDATA[D]]></status>
-		<type><![CDATA[5]]></type>
-		<expected_coverage><![CDATA[1]]></expected_coverage>
-		<custom_fields>
-			<custom_field>
-			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Ejecucion]]></name>
