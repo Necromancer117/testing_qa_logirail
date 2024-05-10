@@ -1,0 +1,81 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1715327377632,47,api contactos,200,OK,Thread Group 1-1,text,true,,130079,183,1,1,http://localhost:8181/api/contactos,42,0,28
+1715327377984,157,contactos,200,OK,Thread Group 1-1,text,true,,20152,179,2,2,http://localhost:8181/contactos,157,0,0
+1715327378049,96,api contactos,200,OK,Thread Group 1-2,text,true,,130079,183,2,2,http://localhost:8181/api/contactos,96,0,1
+1715327378443,5,contactos pagina,200,OK,Thread Group 1-1,text,true,,1658,288,3,3,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",5,0,0
+1715327378447,95,contactos,200,OK,Thread Group 1-2,text,true,,20152,179,3,3,http://localhost:8181/contactos,95,0,0
+1715327378564,6,api contactos,200,OK,Thread Group 1-3,text,true,,130079,183,3,3,http://localhost:8181/api/contactos,5,0,1
+1715327378749,4,contactos get one,200,OK,Thread Group 1-1,text,true,,1256,185,4,4,http://localhost:8181/api/contactos/9,4,0,0
+1715327378843,3,contactos pagina,200,OK,Thread Group 1-2,text,true,,1658,288,4,4,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",3,0,0
+1715327378871,95,contactos,200,OK,Thread Group 1-3,text,true,,20152,179,4,4,http://localhost:8181/contactos,95,0,0
+1715327379052,6,api contactos,200,OK,Thread Group 1-4,text,true,,130079,183,4,4,http://localhost:8181/api/contactos,6,0,1
+1715327379053,8,contactos update,204,No Content,Thread Group 1-1,,true,,152,1580,4,4,http://localhost:8181/api/contactos/9,0,0,0
+1715327379146,3,contactos get one,200,OK,Thread Group 1-2,text,true,,1256,185,4,4,http://localhost:8181/api/contactos/9,3,0,0
+1715327379268,3,contactos pagina,200,OK,Thread Group 1-3,text,true,,1658,288,5,5,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",3,0,0
+1715327379359,72,contactos,200,OK,Thread Group 1-4,text,true,,20152,179,5,5,http://localhost:8181/contactos,72,0,0
+1715327379363,70,api contactos,200,OK,Thread Group 1-1,text,true,,130079,183,5,5,http://localhost:8181/api/contactos,70,0,0
+1715327379450,2,contactos update,204,No Content,Thread Group 1-2,,true,,152,1580,5,5,http://localhost:8181/api/contactos/9,0,0,0
+1715327379558,4,api contactos,200,OK,Thread Group 1-5,text,true,,130079,183,5,5,http://localhost:8181/api/contactos,3,0,1
+1715327379573,2,contactos get one,200,OK,Thread Group 1-3,text,true,,1256,185,5,5,http://localhost:8181/api/contactos/9,2,0,0
+1715327379734,4,contactos pagina,200,OK,Thread Group 1-4,text,true,,1658,288,5,5,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",4,0,0
+1715327379734,48,contactos,200,OK,Thread Group 1-1,text,true,,20152,179,6,6,http://localhost:8181/contactos,48,0,0
+1715327379754,31,api contactos,200,OK,Thread Group 1-2,text,true,,130079,183,6,6,http://localhost:8181/api/contactos,30,0,0
+1715327379862,40,contactos,200,OK,Thread Group 1-5,text,true,,20152,179,6,6,http://localhost:8181/contactos,40,0,0
+1715327379876,27,contactos update,204,No Content,Thread Group 1-3,,true,,152,1580,6,6,http://localhost:8181/api/contactos/9,0,0,0
+1715327380039,2,contactos get one,200,OK,Thread Group 1-4,text,true,,1256,185,6,6,http://localhost:8181/api/contactos/9,2,0,0
+1715327380048,4,api contactos,200,OK,Thread Group 1-6,text,true,,130079,183,6,6,http://localhost:8181/api/contactos,4,0,1
+1715327380084,2,contactos pagina,200,OK,Thread Group 1-1,text,true,,1658,288,6,6,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",2,0,0
+1715327380086,45,contactos,200,OK,Thread Group 1-2,text,true,,20152,179,6,6,http://localhost:8181/contactos,45,0,0
+1715327380202,4,contactos pagina,200,OK,Thread Group 1-5,text,true,,1658,288,6,6,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",4,0,0
+1715327380204,6,api contactos,200,OK,Thread Group 1-3,text,true,,130079,183,6,6,http://localhost:8181/api/contactos,6,0,0
+1715327380341,3,contactos update,204,No Content,Thread Group 1-4,,true,,152,1580,7,7,http://localhost:8181/api/contactos/9,0,0,0
+1715327380352,45,contactos,200,OK,Thread Group 1-6,text,true,,20152,179,7,7,http://localhost:8181/contactos,45,0,0
+1715327380387,11,contactos get one,200,OK,Thread Group 1-1,text,true,,1256,185,7,7,http://localhost:8181/api/contactos/9,11,0,0
+1715327380432,3,contactos pagina,200,OK,Thread Group 1-2,text,true,,1658,288,7,7,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",3,0,0
+1715327380508,2,contactos get one,200,OK,Thread Group 1-5,text,true,,1256,185,7,7,http://localhost:8181/api/contactos/9,2,0,0
+1715327380511,48,contactos,200,OK,Thread Group 1-3,text,true,,20152,179,7,7,http://localhost:8181/contactos,48,0,0
+1715327380556,6,api contactos,200,OK,Thread Group 1-7,text,true,,130079,183,7,7,http://localhost:8181/api/contactos,6,0,0
+1715327380645,3,api contactos,200,OK,Thread Group 1-4,text,true,,130079,183,7,7,http://localhost:8181/api/contactos,3,0,0
+1715327380698,2,contactos update,204,No Content,Thread Group 1-1,,true,,152,1580,7,7,http://localhost:8181/api/contactos/9,0,0,0
+1715327380698,3,contactos pagina,200,OK,Thread Group 1-6,text,true,,1658,288,7,7,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",3,0,0
+1715327380736,2,contactos get one,200,OK,Thread Group 1-2,text,true,,1256,185,7,7,http://localhost:8181/api/contactos/9,2,0,0
+1715327380811,2,contactos update,204,No Content,Thread Group 1-5,,true,,152,1580,8,8,http://localhost:8181/api/contactos/9,0,0,0
+1715327380861,2,contactos pagina,200,OK,Thread Group 1-3,text,true,,1658,288,8,8,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",2,0,0
+1715327380864,42,contactos,200,OK,Thread Group 1-7,text,true,,20152,179,8,8,http://localhost:8181/contactos,42,0,0
+1715327380949,43,contactos,200,OK,Thread Group 1-4,text,true,,20152,179,8,8,http://localhost:8181/contactos,43,0,0
+1715327381002,1,contactos get one,200,OK,Thread Group 1-6,text,true,,1256,185,8,8,http://localhost:8181/api/contactos/9,1,0,0
+1715327381002,4,api contactos,200,OK,Thread Group 1-1,text,true,,130079,183,8,8,http://localhost:8181/api/contactos,3,0,0
+1715327381039,2,contactos update,204,No Content,Thread Group 1-2,,true,,152,1580,8,8,http://localhost:8181/api/contactos/9,0,0,0
+1715327381053,3,api contactos,200,OK,Thread Group 1-8,text,true,,130079,183,8,8,http://localhost:8181/api/contactos,3,0,0
+1715327381116,3,api contactos,200,OK,Thread Group 1-5,text,true,,130079,183,8,8,http://localhost:8181/api/contactos,3,0,0
+1715327381164,3,contactos get one,200,OK,Thread Group 1-3,text,true,,1256,185,8,8,http://localhost:8181/api/contactos/9,3,0,0
+1715327381209,3,contactos pagina,200,OK,Thread Group 1-7,text,true,,1658,288,8,8,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",2,0,0
+1715327381302,2,contactos pagina,200,OK,Thread Group 1-4,text,true,,1658,288,9,9,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",2,0,0
+1715327381318,2,contactos update,204,No Content,Thread Group 1-6,,true,,152,1580,9,9,http://localhost:8181/api/contactos/9,0,0,0
+1715327381318,41,contactos,200,OK,Thread Group 1-1,text,true,,20152,179,9,9,http://localhost:8181/contactos,41,0,0
+1715327381349,12,api contactos,200,OK,Thread Group 1-2,text,true,,130079,183,9,9,http://localhost:8181/api/contactos,12,0,0
+1715327381364,38,contactos,200,OK,Thread Group 1-8,text,true,,20152,179,9,9,http://localhost:8181/contactos,38,0,0
+1715327381427,37,contactos,200,OK,Thread Group 1-5,text,true,,20152,179,9,9,http://localhost:8181/contactos,37,0,0
+1715327381473,3,contactos update,204,No Content,Thread Group 1-3,,true,,152,1580,9,9,http://localhost:8181/api/contactos/9,0,0,0
+1715327381520,2,contactos get one,200,OK,Thread Group 1-7,text,true,,1256,185,9,9,http://localhost:8181/api/contactos/9,2,0,0
+1715327381551,4,api contactos,200,OK,Thread Group 1-9,text,true,,130079,183,9,9,http://localhost:8181/api/contactos,4,0,1
+1715327381605,2,contactos get one,200,OK,Thread Group 1-4,text,true,,1256,185,9,9,http://localhost:8181/api/contactos/9,2,0,0
+1715327381621,3,api contactos,200,OK,Thread Group 1-6,text,true,,130079,183,9,9,http://localhost:8181/api/contactos,3,0,0
+1715327381660,2,contactos pagina,200,OK,Thread Group 1-1,text,true,,1658,288,9,9,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",2,0,0
+1715327381663,39,contactos,200,OK,Thread Group 1-2,text,true,,20152,179,9,9,http://localhost:8181/contactos,39,0,0
+1715327381703,3,contactos pagina,200,OK,Thread Group 1-8,text,true,,1658,288,9,9,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",3,0,0
+1715327381765,2,contactos pagina,200,OK,Thread Group 1-5,text,true,,1658,288,10,10,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",2,0,0
+1715327381777,3,api contactos,200,OK,Thread Group 1-3,text,true,,130079,183,10,10,http://localhost:8181/api/contactos,3,0,0
+1715327381823,3,contactos update,204,No Content,Thread Group 1-7,,true,,152,1580,10,10,http://localhost:8181/api/contactos/9,0,0,0
+1715327381857,67,contactos,200,OK,Thread Group 1-9,text,true,,20152,179,10,10,http://localhost:8181/contactos,67,0,0
+1715327381910,16,contactos update,204,No Content,Thread Group 1-4,,true,,152,1580,10,10,http://localhost:8181/api/contactos/9,0,0,0
+1715327381924,65,contactos,200,OK,Thread Group 1-6,text,true,,20152,179,10,10,http://localhost:8181/contactos,64,0,0
+1715327381963,28,contactos get one,200,OK,Thread Group 1-1,text,true,,1256,185,9,9,http://localhost:8181/api/contactos/9,28,0,0
+1715327382003,3,contactos pagina,200,OK,Thread Group 1-2,text,true,,1658,288,8,8,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",3,0,0
+1715327382008,2,contactos get one,200,OK,Thread Group 1-8,text,true,,1256,185,7,7,http://localhost:8181/api/contactos/9,1,0,0
+1715327382050,4,api contactos,200,OK,Thread Group 1-10,text,true,,130079,183,6,6,http://localhost:8181/api/contactos,4,0,1
+1715327382068,2,contactos get one,200,OK,Thread Group 1-5,text,true,,1256,185,5,5,http://localhost:8181/api/contactos/9,2,0,0
+1715327382081,71,contactos,200,OK,Thread Group 1-3,text,true,,20152,179,4,4,http://localhost:8181/contactos,71,0,0
+1715327382126,30,api contactos,200,OK,Thread Group 1-7,text,true,,130079,183,3,3,http://localhost:8181/api/contactos,29,0,0
+1715327382225,4,contactos pagina,200,OK,Thread Group 1-9,text,true,,1658,288,2,2,"http://localhost:8181/api/contactos?_sort=nombre,apellidos&_projection=id,tratamiento,nombre,apellidos,avatar,telefono,email&_rows=7&_page=7",4,0,0
+1715327382229,6,api contactos,200,OK,Thread Group 1-4,text,true,,130079,183,1,1,http://localhost:8181/api/contactos,6,0,0

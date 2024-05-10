@@ -1,0 +1,1492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2454f629-2f11-4006-a01f-5fef2938af62" activeEnvironment="Default" name="Web4Testing" soapui-version="5.7.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="08354934-73d4-42bd-a42e-64a4c24cfe6f" wadlVersion="http://wadl.dev.java.net/2009/02" name="Web4Testing" type="rest" basePath="" definitionUrl="file:/C:/Users/L41561691R/curso/vs%20code/git/testing_qa_logirail/Pruebas/Web4Testing.wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/C:/Users/L41561691R/curso/vs%20code/git/testing_qa_logirail/Pruebas/Web4Testing.wadl"><con:part><con:url>file:/C:/Users/L41561691R/curso/vs%20code/git/testing_qa_logirail/Pruebas/Web4Testing.wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc xml:lang="en" title="Web4Testing">Versión NodeJS del servidor de pruebas para cursos de FrontEnd y con un sitio web de ejemplo donde aplicar casos de prueba WebDriver.</doc>
+  <resources base="http://localhost:8181">
+    <resource path="api/auth" id="/api/auth">
+      <doc xml:lang="en" title="/api/auth"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Obtener estado de sesión</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/biblioteca" id="/api/biblioteca">
+      <doc xml:lang="en" title="/api/biblioteca"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Listar biblioteca</doc>
+        <request>
+          <param name="_page" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_page Parameter">Número de página empezando en 0 (primera página).</doc>
+          </param>
+          <param name="_rows" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_rows Parameter">Número de filas por página, por defecto 20 si se omite pero aparece el parámetro *_page*.</doc>
+          </param>
+          <param name="_sort" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_sort Parameter">Indica la lista de propiedades (separadas por comas) por la que se ordenaran los resultados, en caso de omitirse se utilizará la propiedad que actúa como primary key. Si el nombre de la propiedad está precedido por un guion (signo negativo) la ordenación será descendente.</doc>
+          </param>
+          <param name="_search" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_search Parameter">Selecciona todos aquellos que en alguna de sus propiedades contenga el valor proporcionado.</doc>
+          </param>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="POST">
+        <doc xml:lang="en" title="POST">Crear volumen</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/biblioteca/{id}" id="/api/biblioteca/{id}">
+      <doc xml:lang="en" title="/api/biblioteca/{id}"/>
+      <param name="id" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <doc xml:lang="en" title="id Parameter">Identificador del recurso</doc>
+      </param>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Recuperar volumen</doc>
+        <request>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PUT" id="PUT">
+        <doc xml:lang="en" title="PUT">Reemplazar volumen</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="DELETE" id="DELETE">
+        <doc xml:lang="en" title="DELETE">Borrar volumen</doc>
+        <request/>
+        <response status="204">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PATCH" id="PATCH">
+        <doc xml:lang="en" title="PATCH">Actualizar parcialmente volumen</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/blog" id="/api/blog">
+      <doc xml:lang="en" title="/api/blog"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Listar blog</doc>
+        <request>
+          <param name="_page" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_page Parameter">Número de página empezando en 0 (primera página).</doc>
+          </param>
+          <param name="_rows" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_rows Parameter">Número de filas por página, por defecto 20 si se omite pero aparece el parámetro *_page*.</doc>
+          </param>
+          <param name="_sort" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_sort Parameter">Indica la lista de propiedades (separadas por comas) por la que se ordenaran los resultados, en caso de omitirse se utilizará la propiedad que actúa como primary key. Si el nombre de la propiedad está precedido por un guion (signo negativo) la ordenación será descendente.</doc>
+          </param>
+          <param name="_search" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_search Parameter">Selecciona todos aquellos que en alguna de sus propiedades contenga el valor proporcionado.</doc>
+          </param>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="POST">
+        <doc xml:lang="en" title="POST">Crear articulo</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/blog/{id}" id="/api/blog/{id}">
+      <doc xml:lang="en" title="/api/blog/{id}"/>
+      <param name="id" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <doc xml:lang="en" title="id Parameter">Identificador del recurso</doc>
+      </param>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Recuperar articulo</doc>
+        <request>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PUT" id="PUT">
+        <doc xml:lang="en" title="PUT">Reemplazar articulo</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="DELETE" id="DELETE">
+        <doc xml:lang="en" title="DELETE">Borrar articulo</doc>
+        <request/>
+        <response status="204">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PATCH" id="PATCH">
+        <doc xml:lang="en" title="PATCH">Actualizar parcialmente articulo</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/contactos" id="/api/contactos">
+      <doc xml:lang="en" title="/api/contactos"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Listar contactos</doc>
+        <request>
+          <param name="_page" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_page Parameter">Número de página empezando en 0 (primera página).</doc>
+          </param>
+          <param name="_rows" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_rows Parameter">Número de filas por página, por defecto 20 si se omite pero aparece el parámetro *_page*.</doc>
+          </param>
+          <param name="_sort" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_sort Parameter">Indica la lista de propiedades (separadas por comas) por la que se ordenaran los resultados, en caso de omitirse se utilizará la propiedad que actúa como primary key. Si el nombre de la propiedad está precedido por un guion (signo negativo) la ordenación será descendente.</doc>
+          </param>
+          <param name="_search" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_search Parameter">Selecciona todos aquellos que en alguna de sus propiedades contenga el valor proporcionado.</doc>
+          </param>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="POST">
+        <doc xml:lang="en" title="POST">Crear contacto</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/contactos/{id}" id="/api/contactos/{id}">
+      <doc xml:lang="en" title="/api/contactos/{id}"/>
+      <param name="id" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <doc xml:lang="en" title="id Parameter">Identificador del recurso</doc>
+      </param>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Recuperar contacto</doc>
+        <request>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PUT" id="PUT">
+        <doc xml:lang="en" title="PUT">Reemplazar contacto</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="DELETE" id="DELETE">
+        <doc xml:lang="en" title="DELETE">Borrar contacto</doc>
+        <request/>
+        <response status="204">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PATCH" id="PATCH">
+        <doc xml:lang="en" title="PATCH">Actualizar parcialmente contacto</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/libros" id="/api/libros">
+      <doc xml:lang="en" title="/api/libros"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Listar libros</doc>
+        <request>
+          <param name="_page" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_page Parameter">Número de página empezando en 0 (primera página).</doc>
+          </param>
+          <param name="_rows" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_rows Parameter">Número de filas por página, por defecto 20 si se omite pero aparece el parámetro *_page*.</doc>
+          </param>
+          <param name="_sort" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_sort Parameter">Indica la lista de propiedades (separadas por comas) por la que se ordenaran los resultados, en caso de omitirse se utilizará la propiedad que actúa como primary key. Si el nombre de la propiedad está precedido por un guion (signo negativo) la ordenación será descendente.</doc>
+          </param>
+          <param name="_search" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_search Parameter">Selecciona todos aquellos que en alguna de sus propiedades contenga el valor proporcionado.</doc>
+          </param>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="POST">
+        <doc xml:lang="en" title="POST">Crear libro</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/libros/{id}" id="/api/libros/{id}">
+      <doc xml:lang="en" title="/api/libros/{id}"/>
+      <param name="id" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <doc xml:lang="en" title="id Parameter">Identificador del recurso</doc>
+      </param>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Recuperar libro</doc>
+        <request>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PUT" id="PUT">
+        <doc xml:lang="en" title="PUT">Reemplazar libro</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="DELETE" id="DELETE">
+        <doc xml:lang="en" title="DELETE">Borrar libro</doc>
+        <request/>
+        <response status="204">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PATCH" id="PATCH">
+        <doc xml:lang="en" title="PATCH">Actualizar parcialmente libro</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/login" id="/api/login">
+      <doc xml:lang="en" title="/api/login"/>
+      <method name="POST" id="POST">
+        <doc xml:lang="en" title="POST">Iniciar sesión</doc>
+        <request>
+          <param name="cookie" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="cookie Parameter">true para que genere y envíe la cookie</doc>
+          </param>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/x-www-form-urlencoded"/>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/x-www-form-urlencoded"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/x-www-form-urlencoded"/>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/x-www-form-urlencoded"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/logout" id="/api/logout">
+      <doc xml:lang="en" title="/api/logout"/>
+      <method name="POST" id="POST">
+        <doc xml:lang="en" title="POST">Cerrar sesión</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/marcas" id="/api/marcas">
+      <doc xml:lang="en" title="/api/marcas"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Listar marcas</doc>
+        <request>
+          <param name="_page" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_page Parameter">Número de página empezando en 0 (primera página).</doc>
+          </param>
+          <param name="_rows" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_rows Parameter">Número de filas por página, por defecto 20 si se omite pero aparece el parámetro *_page*.</doc>
+          </param>
+          <param name="_sort" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_sort Parameter">Indica la lista de propiedades (separadas por comas) por la que se ordenaran los resultados, en caso de omitirse se utilizará la propiedad que actúa como primary key. Si el nombre de la propiedad está precedido por un guion (signo negativo) la ordenación será descendente.</doc>
+          </param>
+          <param name="_search" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_search Parameter">Selecciona todos aquellos que en alguna de sus propiedades contenga el valor proporcionado.</doc>
+          </param>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/marcas/{id}" id="/api/marcas/{id}">
+      <doc xml:lang="en" title="/api/marcas/{id}"/>
+      <param name="id" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <doc xml:lang="en" title="id Parameter">Identificador del recurso</doc>
+      </param>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Recuperar marca</doc>
+        <request>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/peliculas" id="/api/peliculas">
+      <doc xml:lang="en" title="/api/peliculas"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Listar peliculas</doc>
+        <request>
+          <param name="_page" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_page Parameter">Número de página empezando en 0 (primera página).</doc>
+          </param>
+          <param name="_rows" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_rows Parameter">Número de filas por página, por defecto 20 si se omite pero aparece el parámetro *_page*.</doc>
+          </param>
+          <param name="_sort" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_sort Parameter">Indica la lista de propiedades (separadas por comas) por la que se ordenaran los resultados, en caso de omitirse se utilizará la propiedad que actúa como primary key. Si el nombre de la propiedad está precedido por un guion (signo negativo) la ordenación será descendente.</doc>
+          </param>
+          <param name="_search" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_search Parameter">Selecciona todos aquellos que en alguna de sus propiedades contenga el valor proporcionado.</doc>
+          </param>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="POST">
+        <doc xml:lang="en" title="POST">Crear pelicula</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/peliculas/{id}" id="/api/peliculas/{id}">
+      <doc xml:lang="en" title="/api/peliculas/{id}"/>
+      <param name="id" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <doc xml:lang="en" title="id Parameter">Identificador del recurso</doc>
+      </param>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Recuperar pelicula</doc>
+        <request>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PUT" id="PUT">
+        <doc xml:lang="en" title="PUT">Reemplazar pelicula</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="DELETE" id="DELETE">
+        <doc xml:lang="en" title="DELETE">Borrar pelicula</doc>
+        <request/>
+        <response status="204">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PATCH" id="PATCH">
+        <doc xml:lang="en" title="PATCH">Actualizar parcialmente pelicula</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/personas" id="/api/personas">
+      <doc xml:lang="en" title="/api/personas"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Listar personas</doc>
+        <request>
+          <param name="_page" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_page Parameter">Número de página empezando en 0 (primera página).</doc>
+          </param>
+          <param name="_rows" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_rows Parameter">Número de filas por página, por defecto 20 si se omite pero aparece el parámetro *_page*.</doc>
+          </param>
+          <param name="_sort" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_sort Parameter">Indica la lista de propiedades (separadas por comas) por la que se ordenaran los resultados, en caso de omitirse se utilizará la propiedad que actúa como primary key. Si el nombre de la propiedad está precedido por un guion (signo negativo) la ordenación será descendente.</doc>
+          </param>
+          <param name="_search" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_search Parameter">Selecciona todos aquellos que en alguna de sus propiedades contenga el valor proporcionado.</doc>
+          </param>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="POST">
+        <doc xml:lang="en" title="POST">Crear persona</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/personas/{id}" id="/api/personas/{id}">
+      <doc xml:lang="en" title="/api/personas/{id}"/>
+      <param name="id" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <doc xml:lang="en" title="id Parameter">Identificador del recurso</doc>
+      </param>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Recuperar persona</doc>
+        <request>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PUT" id="PUT">
+        <doc xml:lang="en" title="PUT">Reemplazar persona</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="DELETE" id="DELETE">
+        <doc xml:lang="en" title="DELETE">Borrar persona</doc>
+        <request/>
+        <response status="204">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/register" id="/api/register">
+      <doc xml:lang="en" title="/api/register"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Consultar su usuario</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="POST">
+        <doc xml:lang="en" title="POST">Registrar un nuevo usuario</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PUT" id="PUT">
+        <doc xml:lang="en" title="PUT">Modificar el nombre de su usuario</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/register/password" id="/api/register/password">
+      <doc xml:lang="en" title="/api/register/password"/>
+      <method name="PUT" id="PUT">
+        <doc xml:lang="en" title="PUT">Es necesario conocer la contraseña actual antes de cambiarla
+Cambiar su contraseña</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="204">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/tarjetas" id="/api/tarjetas">
+      <doc xml:lang="en" title="/api/tarjetas"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Listar tarjetas</doc>
+        <request>
+          <param name="_page" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_page Parameter">Número de página empezando en 0 (primera página).</doc>
+          </param>
+          <param name="_rows" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_rows Parameter">Número de filas por página, por defecto 20 si se omite pero aparece el parámetro *_page*.</doc>
+          </param>
+          <param name="_sort" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_sort Parameter">Indica la lista de propiedades (separadas por comas) por la que se ordenaran los resultados, en caso de omitirse se utilizará la propiedad que actúa como primary key. Si el nombre de la propiedad está precedido por un guion (signo negativo) la ordenación será descendente.</doc>
+          </param>
+          <param name="_search" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_search Parameter">Selecciona todos aquellos que en alguna de sus propiedades contenga el valor proporcionado.</doc>
+          </param>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="POST">
+        <doc xml:lang="en" title="POST">Crear tarjeta</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/tarjetas/{id}" id="/api/tarjetas/{id}">
+      <doc xml:lang="en" title="/api/tarjetas/{id}"/>
+      <param name="id" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <doc xml:lang="en" title="id Parameter">Identificador del recurso</doc>
+      </param>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Recuperar tarjeta</doc>
+        <request>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PUT" id="PUT">
+        <doc xml:lang="en" title="PUT">Reemplazar tarjeta</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/vehiculos" id="/api/vehiculos">
+      <doc xml:lang="en" title="/api/vehiculos"/>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Listar vehiculos</doc>
+        <request>
+          <param name="_page" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_page Parameter">Número de página empezando en 0 (primera página).</doc>
+          </param>
+          <param name="_rows" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_rows Parameter">Número de filas por página, por defecto 20 si se omite pero aparece el parámetro *_page*.</doc>
+          </param>
+          <param name="_sort" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_sort Parameter">Indica la lista de propiedades (separadas por comas) por la que se ordenaran los resultados, en caso de omitirse se utilizará la propiedad que actúa como primary key. Si el nombre de la propiedad está precedido por un guion (signo negativo) la ordenación será descendente.</doc>
+          </param>
+          <param name="_search" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_search Parameter">Selecciona todos aquellos que en alguna de sus propiedades contenga el valor proporcionado.</doc>
+          </param>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="POST">
+        <doc xml:lang="en" title="POST">Crear vehiculo</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="201">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+    <resource path="api/vehiculos/{id}" id="/api/vehiculos/{id}">
+      <doc xml:lang="en" title="/api/vehiculos/{id}"/>
+      <param name="id" type="xs:string" required="true" default="" style="template" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <doc xml:lang="en" title="id Parameter">Identificador del recurso</doc>
+      </param>
+      <method name="GET" id="GET">
+        <doc xml:lang="en" title="GET">Recuperar vehiculo</doc>
+        <request>
+          <param name="_projection" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <doc xml:lang="en" title="_projection Parameter">Devuelve solo aquellas propiedades de la lista suministrada, los nombres de las propiedades deben ir separadas por comas.</doc>
+          </param>
+        </request>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PUT" id="PUT">
+        <doc xml:lang="en" title="PUT">Reemplazar vehiculo</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="DELETE" id="DELETE">
+        <doc xml:lang="en" title="DELETE">Borrar vehiculo</doc>
+        <request/>
+        <response status="204">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="PATCH" id="PATCH">
+        <doc xml:lang="en" title="PATCH">Actualizar parcialmente vehiculo</doc>
+        <request>
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="">
+          <representation mediaType="application/json"/>
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="400">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="OPTIONS" id="OPTIONS">
+        <doc xml:lang="en" title="OPTIONS">Sondeo CORS</doc>
+        <request/>
+        <response status="200">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="401">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="403">
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8181</con:endpoint></con:endpoints><con:resource name="/api/auth" path="/api/auth" id="4fc3ac2b-251c-4437-a396-78cb9db6eff8"><con:settings/><con:parameters/><con:method name="GET" id="ff67af86-4b92-46aa-9e1d-879d57f70a90" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="ba74ea53-59ca-4b32-86ba-aa5a62f80338" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/biblioteca" path="/api/biblioteca" id="6acb9d75-85d0-4f63-bd0f-72813612b3ff"><con:settings/><con:parameters/><con:method name="GET" id="7d32a464-dc50-4fb4-84b9-eaef0250f17e" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_page</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_rows</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_sort</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_search</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="80ce1f0d-a5de-4923-afa6-646e823ac662" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="POST" id="93fe07e4-2a1a-4edc-94af-6aef96e0c5e5" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3e7476da-c3e2-4a19-a14f-0b87aae97bd4" mediaType="application/json" postQueryString="false"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="ac9fd9b6-f2f3-4e18-adc9-44d9b3aacb7f" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="cc98a5ef-248a-47a1-8518-fcf3989d9c3e" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/biblioteca/{id}" path="api/biblioteca/{id}" id="f0ffd0f8-00fc-48b8-9102-a41b24c06d5e"><con:settings/><con:parameters><con:parameter required="true"><con:name>id</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:method name="GET" id="4540e456-e217-4d09-b13c-b6abf5d011e0" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="57050b89-82af-46be-8027-cf3f33a865c5" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PUT" id="b891cb07-4d5c-4115-ae2c-d4100a940b55" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="08dd7e61-67df-4fff-b67f-00032527a21e" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="DELETE" id="e240de33-bc81-4a32-a4bc-e5857bfd95fa" method="DELETE"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>204</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="a65dcd99-41e6-415c-8bcf-5d30e3079d48" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PATCH" id="73cfc13a-f012-4350-9eb1-728de9ded0fd" method="PATCH"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="a1e3a752-fc1f-4280-a184-694b3c4fa90c" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="c7010850-e14d-4796-90fb-feb6d402cfce" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="de414415-46af-4282-8179-aab1d70ad2de" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/blog" path="api/blog" id="6236cabb-e4a3-4319-9da6-e12d10379787"><con:settings/><con:parameters/><con:method name="GET" id="14429dce-c7b1-4346-a0f5-0dc8dbf92ae5" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_page</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_rows</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_sort</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_search</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="280d0498-179a-4e91-837e-18950dc52bf9" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="POST" id="1ef38956-8033-41ac-ae73-e4f61fe3f3e7" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="b5c54c27-55b4-4fa8-8fd6-f9c303ccc4d5" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="8f352dd1-fc26-457e-ba62-c7a0c2725ca7" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="b7fa2d4c-5eff-472f-9571-e6dc32a2adb1" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/blog/{id}" path="api/blog/{id}" id="af16f494-3de0-4521-8f88-99c20dcbc6f5"><con:settings/><con:parameters><con:parameter required="true"><con:name>id</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:method name="GET" id="59495290-5965-4d4c-9c4e-730a1de3b25b" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="f6e86470-6056-4440-a21e-260b5f0cb290" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PUT" id="ca6f43dd-dbc4-406e-885a-4d03ebc22133" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="06f049df-44c3-479d-8bd9-5c36181439cf" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="DELETE" id="aa3ed277-10a6-4749-84cf-89cc48bb9aa0" method="DELETE"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>204</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="66b1292d-daa8-49f5-b972-3628c92f9cdc" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PATCH" id="a8b460ba-5920-40f5-9751-8812b268be79" method="PATCH"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="654e6ffd-7f53-41b9-aaff-1cac034e0859" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="38b4c1c9-057b-40f5-840a-d214a4c5ee0a" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="a686dadc-8d59-4569-8c96-7b370bb035e8" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/contactos" path="api/contactos" id="2dd975b0-17f3-4633-8cb1-f66c0fe8fe87"><con:settings/><con:parameters/><con:method name="GET" id="28fb8fad-4d7e-499b-8bb8-19a02521db76" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_page</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_rows</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_sort</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_search</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="fb693557-9a4e-44cd-8bfd-3c44d3358e89" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="POST" id="a1bd604c-cdc0-4361-97c9-3150ddf05018" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="b34a3798-aa76-4a11-b5ce-789ae5ea1614" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="6482ea46-2e8a-4285-8401-32381893925f" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="fe8519ae-2e5d-4ac3-81c2-bf3d105bb554" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/contactos/{id}" path="api/contactos/{id}" id="a997c294-8f82-4e85-aeed-c6fcf21783e1"><con:settings/><con:parameters><con:parameter required="true"><con:name>id</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:method name="GET" id="943f42c9-5fa7-4d5e-92fb-5124bb495aa3" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="e5ff7925-b127-43c7-9bc9-d08f9f29fbcd" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PUT" id="c421ed50-94ec-439e-8338-b1e41cc7ccd6" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="e211f949-c033-4ae4-a8c0-a68aa0d773c9" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="DELETE" id="0f99314f-cd1f-479f-beb2-ad7eebe9cf8d" method="DELETE"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>204</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="d408fb5b-1fa6-433c-b4ba-41b62f32e025" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PATCH" id="c2a4f584-6b5c-4ef5-b5f4-bc3ffe47859e" method="PATCH"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="227eeda1-de52-4bcd-ada4-773dc0507c47" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="112a46f9-806b-4d6b-8fff-4df5280697d6" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="8c8a1da8-d4ee-4358-be45-d2c41ec127b0" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/libros" path="api/libros" id="719166cf-4699-4a0c-9902-7f1b982810f2"><con:settings/><con:parameters/><con:method name="GET" id="815a2741-54e6-4161-b03f-df75cbcde94d" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_page</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_rows</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_sort</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_search</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="e4e329c1-ff97-46cf-948d-d564e4d1b53a" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="POST" id="140b664e-a58a-491c-a0a5-3064d98599b7" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="473784ca-34e4-4ffb-bb18-520d73e613eb" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="320d9137-2e64-4124-9129-0b6853645cf9" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="722fcc36-6aaa-46b9-945a-8188e3b1fb47" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/libros/{id}" path="api/libros/{id}" id="514a03df-603d-4096-9119-dbf916f22211"><con:settings/><con:parameters><con:parameter required="true"><con:name>id</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:method name="GET" id="f83c33ab-41e7-4e8c-9e2a-69271fd8289e" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="b4a58003-46f1-4bd8-8ee6-6cfdada91d70" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PUT" id="8c36e52b-77d6-4326-b966-1661a1ec8d68" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="a1588511-196b-4259-a03e-fb20e7dca49a" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="DELETE" id="786e5a8e-1995-4786-a93f-89fd3999c54d" method="DELETE"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>204</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="96ba64b6-4d11-42b0-bcd3-c0aca212f287" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PATCH" id="bf89a59d-1ffa-483f-bbd1-345a2470cec0" method="PATCH"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="58979cd1-e8b2-4ccb-aacb-206d548e45cc" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="a281177a-f7c7-4d02-b2cc-56ad3ac87b96" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="ba8432b6-8600-4084-8747-a6e1297b648d" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/login" path="api/login" id="965e5dfe-da54-4270-ad71-152a0a046797"><con:settings/><con:parameters/><con:method name="POST" id="9c706a39-29d3-4fda-8043-1a46a8bc2dec" method="POST"><con:settings/><con:parameters><con:parameter><con:name>cookie</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="34241e4e-5b83-4a46-b78d-483e8793a4f2" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="f06f21d8-9c41-4c83-9ace-6f8670c83747" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="def0264a-2669-4da2-9313-408677c89623" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/logout" path="api/logout" id="d75aeed2-8b3d-449a-991e-07de87857b8a"><con:settings/><con:parameters/><con:method name="POST" id="22ebc7a3-bc57-45cc-be31-9ef1658b12b7" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="ab37d1e8-4fec-4e6c-a447-7069df0890cc" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/marcas" path="api/marcas" id="ce2b1dc5-71d4-451f-aa1f-c375e30df760"><con:settings/><con:parameters/><con:method name="GET" id="e43bcbe4-f2fd-4278-8dd1-ec54a2e3550f" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_page</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_rows</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_sort</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_search</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="e4b9b990-8678-4ab2-ab02-c919cdd4d25e" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/marcas/{id}" path="api/marcas/{id}" id="5888eb09-c1cd-436b-b9f4-600d4c8a8405"><con:settings/><con:parameters><con:parameter required="true"><con:name>id</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:method name="GET" id="3ded4b7f-f677-41c6-89ce-8e7165125aa1" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="f5bb7732-5e05-4786-9e9d-22982c26053e" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/peliculas" path="api/peliculas" id="19a241e1-f515-45e5-88b0-e4d3a97b40c5"><con:settings/><con:parameters/><con:method name="GET" id="88fe503f-bbea-41bc-bc76-64820bb1e6b5" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_page</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_rows</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_sort</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_search</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="ce7fe5ea-05a9-4e93-af23-440ec64c8387" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="POST" id="ee1756a1-02a4-47a4-9110-96eecc8f861d" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="0fc37b20-4690-4340-8dcc-a02c7561e7e0" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="faf834c4-9113-47af-9914-2b24eb81e3a1" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="4b37d668-d631-4c68-824e-f12f1258dcca" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/peliculas/{id}" path="api/peliculas/{id}" id="2b1183fe-2bd2-4071-8b6a-187b9aafdb05"><con:settings/><con:parameters><con:parameter required="true"><con:name>id</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:method name="GET" id="401e9432-dd94-4290-9e1b-92023ee1106b" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="328adcd8-3657-46a5-93fe-acbae9c96484" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PUT" id="1cb9271a-e388-45e9-99be-47afd2208efc" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="9ceada6b-862d-41e7-a46c-28e62a32cbf5" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="DELETE" id="ba9a41dc-822e-4ff0-9e37-9177a26aedb5" method="DELETE"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>204</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="0224a8a7-2c2c-4026-99bc-0bbce20cb6fb" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PATCH" id="c8031980-6bf7-4e6c-b4c8-70f621647e3c" method="PATCH"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="ef63c4ee-c7e9-4142-9e6d-8f395d7cb9e9" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="69e61127-e136-417d-9113-428f4f529099" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="2f98fb05-9cbe-4a2b-b55f-8320f15d087b" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/personas" path="/api/personas" id="6f2c34dc-826b-45d1-bca9-c23ec32c3cfc"><con:settings/><con:parameters/><con:method name="GET" id="5e7eaea0-6c71-43fb-90f9-0b244e477947" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_page</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_rows</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_sort</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_search</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="fb7023c2-0003-4bc1-8088-eb22046091db" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request/><con:originalUri>http://localhost/api/personas</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="_page" value="1"/>
+  <con:entry key="_rows" value="10"/>
+  <con:entry key="_sort" value="apellidos"/>
+</con:parameters></con:request></con:method><con:method name="POST" id="44cf9b9f-6d44-4fb9-a3e2-37fd189b2e52" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="d1212eec-9777-4aa9-a55e-6a07acb4208a" mediaType="application/json" postQueryString="false"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/personas/{id}" path="api/personas/{id}" id="0aa5362a-35fa-4d71-99a1-2f09fb11a66b"><con:settings/><con:parameters><con:parameter required="true"><con:name>id</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:method name="GET" id="24b727f0-372b-4cac-869d-eb9b3cdd2eaf" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="09368fd5-5c76-4d24-8f67-749767349fb5" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PUT" id="bcf5051f-8637-4c6a-8ff9-5fb0133b7b01" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="01201fe3-9b0e-43cc-a577-d8dc89b9af74" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="DELETE" id="7896f76a-b2d3-4281-b81c-d28b92b2628a" method="DELETE"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>204</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="a05135a3-fd19-4264-95f6-4f95012201bb" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/register" path="api/register" id="76b4dd2c-d2a6-45f4-a3ff-7c717d082d09"><con:settings/><con:parameters/><con:method name="GET" id="1287b04f-ebac-4f36-a49d-8a64ab30ad82" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="73fd049a-2da6-4681-beaf-e2fdbd775c20" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="POST" id="94d37a20-f52b-43d9-bc6c-c2e9c0b887c6" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="1d114951-0e12-47c8-9806-d146ea5acad3" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PUT" id="d52ba60b-eb1e-40ce-8f35-d5459dc01683" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>204</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="55ad4623-0bd8-46fa-a791-0941a0105d38" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/register/password" path="api/register/password" id="95163be4-38eb-4550-b5ba-63ce074d9397"><con:settings/><con:parameters/><con:method name="PUT" id="8456f2cc-5b04-4961-9a68-0326ee3f977e" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>204</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="9fa53ff9-4a67-42dd-afb1-1182d197abae" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/tarjetas" path="api/tarjetas" id="0ec7d223-91fe-452a-8fa4-aba2e31a9d31"><con:settings/><con:parameters/><con:method name="GET" id="6a00d2be-ccb8-4008-9a6a-ad35b1327143" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_page</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_rows</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_sort</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_search</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="5bf797d1-5b75-4cfa-8240-80875e7d1743" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="POST" id="d1d57d9e-ddc2-49ab-936d-aefab1e32475" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="022789dd-f7c0-4398-9000-bcefb5f394de" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/tarjetas/{id}" path="api/tarjetas/{id}" id="29040b63-b202-4292-b68d-4ddb61c9a7c1"><con:settings/><con:parameters><con:parameter required="true"><con:name>id</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:method name="GET" id="21cc8cb2-4412-460c-a72c-ede221950411" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="6c4d3b5e-c93b-435c-8a2d-6f82b86dea0f" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PUT" id="79ab6330-a60a-4d4a-a60b-7e243cc1557b" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="f201003f-7ce2-45f7-84b7-dcf5a226f6e6" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/vehiculos" path="api/vehiculos" id="9670f4af-ddcd-4b17-87f4-8d9278ad7f83"><con:settings/><con:parameters/><con:method name="GET" id="d22f3d86-fbc5-4bf2-aee9-48e91a484bb4" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_page</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_rows</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_sort</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_search</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="3aac610b-ca94-4917-83a5-d290b6fe793c" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="POST" id="d7d3bed6-7444-472f-98ed-c73dfcb1446a" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="10cae517-5e72-4667-88b2-cf6511b77df3" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="b752363d-a046-45bf-99f1-e779195a40b0" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="827e6ead-337d-4c7b-8ece-0eb7ce09c8a0" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/api/vehiculos/{id}" path="api/vehiculos/{id}" id="0611a3be-43e7-4aec-8fdb-331133a755ec"><con:settings/><con:parameters><con:parameter required="true"><con:name>id</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/></con:parameter></con:parameters><con:method name="GET" id="d2d711c1-2f56-410c-819f-ee874610c77b" method="GET"><con:settings/><con:parameters><con:parameter><con:name>_projection</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="8b46a442-100a-4cbb-bcf7-44d23131e6ad" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PUT" id="098c3eea-7294-411e-9085-1a80b9ea992d" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="eb4ca5e2-c584-441e-a1a9-73d0b156724d" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="DELETE" id="94aa7fdc-a7fa-4fac-bab4-9b6fc33a910a" method="DELETE"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>204</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="5ebd87c5-828f-4cf8-92aa-4bfd605bf524" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="PATCH" id="4ee0183b-cfd9-4de2-98e0-0dd82d40a4a4" method="PATCH"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status/><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="ff521f4b-65e5-4e10-af85-137eb5618f51" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method><con:method name="OPTIONS" id="969881e3-14a5-44d3-b80c-a03cb2e419df" method="OPTIONS"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="FAULT" id=""><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" id="9466e7b5-0f92-4536-992d-175094744afa" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8181</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="ac869373-5063-404d-9846-451017e201dc" name="Personas"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="41b85692-49e0-43d2-8734-ea38f5856b54" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="test1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="GET - page 1 rows 10 sort apellidos" id="2a462a2f-9741-45e4-b6aa-103c30f1d227"><con:settings/><con:config service="Web4Testing" resourcePath="/api/personas" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GET - page 1 rows 10 sort apellidos" id="fb7023c2-0003-4bc1-8088-eb22046091db" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8181</con:endpoint><con:request/><con:originalUri>http://localhost/api/personas</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="0903b3b2-275e-49b8-b347-692ea25783d7" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="dac872ec-d865-45c1-b6b2-d9a3115a19ca" name="JsonPath Match"><con:configuration><path>$.size</path><content>10</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Count" id="957d9236-29ae-4df2-ad19-a38f81578b65" name="JsonPath Count"><con:configuration><path>$.content</path><content>10</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="_page" value="1"/>
+  <con:entry key="_rows" value="10"/>
+  <con:entry key="_sort" value="apellidos"/>
+</con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
