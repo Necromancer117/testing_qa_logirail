@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite id="" name="" >
+<node_order><![CDATA[]]></node_order>
+<details><![CDATA[]]></details> 
+<testsuite id="255" name="Comprar Billete" >
+<node_order><![CDATA[1]]></node_order>
+<details><![CDATA[<p>Requisitos necesarios para poder crear los pasos para poder comprar el billete de tren.</p>
+]]></details> 
+
+<testcase internalid="298" name="Flujo Comprar billete">
+	<node_order><![CDATA[8]]></node_order>
+	<externalid><![CDATA[10]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Flujo Comprar billete de tren</p>
+]]></summary>
+	<preconditions><![CDATA[<ul>
+	<li>La m&aacute;quina de venta de billetes funcional</li>
+	<li>Una interfaz gr&aacute;fica en la que se pueda visualizar el contenido</li>
+	<li>Conexi&oacute;n a la red interna de Renfe.</li>
+	<li>Una base de datos independiente con los datos necesarios para funcionar de forma aut&oacute;noma, en caso de que la conexi&oacute;n con la red falle.</li>
+</ul>
+]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[3]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Seleccionar espa&ntilde;ol.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; que el idioma a elegir es el espa&ntilde;ol. El resto de datos saldr&aacute;n en este idioma.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Seleccionar Media Distancia.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; el tren escogido.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Seleccionar origen Figueres.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; el origen figueres.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Seleccionar Portbou.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrara que el destino seleccionado es Portbou.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Seleccionar fecha 29/04/2024.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; la fecha de salida 29/04/2024.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Seleccionar hora 8:26.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; la hora de salida del tren(8:26).</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Seleccionar vag&oacute;n 3 y asiento 2B.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; el n&uacute;mero del vag&oacute;n (3) y asiento seleccionado (2B).</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Seleccionar billete est&aacute;ndar.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; que la tarifa seleccionada es la est&aacute;ndar.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Rellenar con los datos:</p>
+
+<p>Nombre: Pepito</p>
+
+<p>Apellido/s: Grillo</p>
+
+<p>DNI/NIF: 12345678A</p>
+
+<p>Tel&eacute;fono: 123456789</p>
+
+<p>Correo:pgrillo@fakemail.com</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; datos:</p>
+
+<p>Nombre: Pepito</p>
+
+<p>Apellido/s: Grillo</p>
+
+<p>DNI/NIF: 12345678A</p>
+
+<p>Tel&eacute;fono: 123456789</p>
+
+<p>Correo:pgrillo@fakemail.com</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Seleccionar metodo pago.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrara m&eacute;todo pago.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Opciones del usuario]]></req_spec_title>
+			<doc_id><![CDATA[RF 2.5]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Flujo]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+<testsuite id="316" name="Pago" >
+<node_order><![CDATA[9]]></node_order>
+<details><![CDATA[]]></details> 
+
+<testcase internalid="317" name="Metalico">
+	<node_order><![CDATA[0]]></node_order>
+	<externalid><![CDATA[11]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Caso de&nbsp;prueba&nbsp;del&nbsp;met&aacute;lico.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Seleccionar espa&ntilde;ol.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; que el idioma a elegir es el espa&ntilde;ol. El resto de datos saldr&aacute;n en este idioma.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Seleccionar Media Distancia.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; el tren escogido.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Seleccionar origen Figueres</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; origen figueres.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Seleccionar Destino Portbou.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute;&nbsp;que el destino seleccionado es Portbou.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Seleccionar fecha 29/04/2024.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; la fecha de salida&nbsp;29/04/2024.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Seleccionar hora 8:26.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; la hora de salida del tren(8:26).</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Seleccionar vag&oacute;n 3 y asiento 2B.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; el n&uacute;mero del vag&oacute;n (3) y asiento seleccionado (2B).</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Seleccionar billete est&aacute;ndar.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; que la tarifa seleccionada es la est&aacute;ndar.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Rellenar con los datos:</p>
+
+<p>Nombre: Pepito</p>
+
+<p>Apellido/s: Grillo</p>
+
+<p>DNI/NIF: 12345678A</p>
+
+<p>Tel&eacute;fono: 123456789</p>
+
+<p>Correo: pgrillo@fakemail.com</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; datos:</p>
+
+<p>Nombre: Pepito</p>
+
+<p>Apellido/s: Grillo</p>
+
+<p>DNI/NIF: 12345678A</p>
+
+<p>Tel&eacute;fono: 123456789</p>
+
+<p>Correo: pgrillo@fakemail.com</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Seleccionar&nbsp;m&eacute;todo&nbsp;pago:&nbsp;Met&aacute;lico.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute;&nbsp;la pantalla de metalico con el precio 3,40&euro;.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[11]]></step_number>
+	<actions><![CDATA[<p>Introducir billete de 5&euro; en la maquina.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>La pantalla muestra la informacion del pago:</p>
+
+<p>Precio: 3,40&euro;</p>
+
+<p>Introducido: 5&euro;</p>
+
+<p>Cambio: 1,60&euro;</p>
+
+<p>Y devuelve 1,60&euro; de cambio.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="329" name="Tarjeta">
+	<node_order><![CDATA[1]]></node_order>
+	<externalid><![CDATA[12]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Caso de&nbsp;prueba&nbsp;de targeta.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Seleccionar espa&ntilde;ol.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; que el idioma a elegir es el espa&ntilde;ol. El resto de datos saldr&aacute;n en este idioma.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Seleccionar Media Distancia.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; el tren escogido.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Seleccionar origen Figueres</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; origen figueres.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Seleccionar Destino Portbou.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute;&nbsp;que el destino seleccionado es Portbou.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Seleccionar fecha 29/04/2024.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; la fecha de salida&nbsp;29/04/2024.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Seleccionar hora 8:26.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; la hora de salida del tren(8:26).</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Seleccionar vag&oacute;n 3 y asiento 2B.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; el n&uacute;mero del vag&oacute;n (3) y asiento seleccionado (2B).</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Seleccionar billete est&aacute;ndar.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; que la tarifa seleccionada es la est&aacute;ndar.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Rellenar con los datos:</p>
+
+<p>Nombre: Pepito</p>
+
+<p>Apellido/s: Grillo</p>
+
+<p>DNI/NIF: 12345678A</p>
+
+<p>Tel&eacute;fono: 123456789</p>
+
+<p>Correo: pgrillo@fakemail.com</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; datos:</p>
+
+<p>Nombre: Pepito</p>
+
+<p>Apellido/s: Grillo</p>
+
+<p>DNI/NIF: 12345678A</p>
+
+<p>Tel&eacute;fono: 123456789</p>
+
+<p>Correo: pgrillo@fakemail.com</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Seleccionar&nbsp;m&eacute;todo&nbsp;pago: Tarjeta.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute;&nbsp;la pantalla de tarjeta con el precio 3,40&euro;.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[11]]></step_number>
+	<actions><![CDATA[<p>Introducir tarjeta bancaria en la TPV.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Lectura correcta.</p>
+
+<p>Introduzca PIN de la tarjeta.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[12]]></step_number>
+	<actions><![CDATA[<p>Introducir pin de la tarjeta 1111 en el marcador.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>La pantalla muestra el pin como ****.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[13]]></step_number>
+	<actions><![CDATA[<p>Seleccionar aceptar.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Transacci&oacute;n&nbsp;aceptada.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="343" name="Tarjeta inalámbrica">
+	<node_order><![CDATA[2]]></node_order>
+	<externalid><![CDATA[13]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Caso de&nbsp;prueba&nbsp;de targeta.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Seleccionar espa&ntilde;ol.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; que el idioma a elegir es el espa&ntilde;ol. El resto de datos saldr&aacute;n en este idioma.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Seleccionar Media Distancia.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; el tren escogido.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Seleccionar origen Figueres</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; origen figueres.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Seleccionar Destino Portbou.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute;&nbsp;que el destino seleccionado es Portbou.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Seleccionar fecha&nbsp;29/04/2024.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; la fecha de salida&nbsp;29/04/2024.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Seleccionar hora 8:26.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; la hora de salida del tren(8:26).</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Seleccionar vag&oacute;n 3 y asiento 2B.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; el n&uacute;mero del vag&oacute;n (3) y asiento seleccionado (2B).</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Seleccionar billete est&aacute;ndar.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; que la tarifa seleccionada es la est&aacute;ndar.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Rellenar con los datos:</p>
+
+<p>Nombre: Pepito</p>
+
+<p>Apellido/s: Grillo</p>
+
+<p>DNI/NIF: 12345678A</p>
+
+<p>Tel&eacute;fono: 123456789</p>
+
+<p>Correo: pgrillo@fakemail.com</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; datos:</p>
+
+<p>Nombre: Pepito</p>
+
+<p>Apellido/s: Grillo</p>
+
+<p>DNI/NIF: 12345678A</p>
+
+<p>Tel&eacute;fono: 123456789</p>
+
+<p>Correo: pgrillo@fakemail.com</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Seleccionar&nbsp;m&eacute;todo&nbsp;pago:&nbsp;Tarjeta.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute;&nbsp;la pantalla de tarjeta con el precio 3,40&euro;.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[11]]></step_number>
+	<actions><![CDATA[<p>Acercar tarjeta bancaria en la TPV.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Lectura correcta.</p>
+
+<p>Transacci&oacute;n&nbsp;aceptada.</p>
+
+<p>&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="361" name="Descuentos y ayudas">
+	<node_order><![CDATA[3]]></node_order>
+	<externalid><![CDATA[14]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Caso de&nbsp;prueba&nbsp;del&nbsp;met&aacute;lico.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Seleccionar espa&ntilde;ol.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; que el idioma a elegir es el espa&ntilde;ol. El resto de datos saldr&aacute;n en este idioma.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Seleccionar Media Distancia.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; el tren escogido.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Seleccionar origen Figueres</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; origen figueres.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Seleccionar Destino Portbou.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute;&nbsp;que el destino seleccionado es Portbou.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Seleccionar fecha 29/04/2024.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; la fecha de salida&nbsp;29/04/2024.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>Seleccionar hora 8:26.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; la hora de salida del tren(8:26).</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Seleccionar vag&oacute;n 3 y asiento 2B.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; el n&uacute;mero del vag&oacute;n (3) y asiento seleccionado (2B).</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>Seleccionar billete est&aacute;ndar.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; que la tarifa seleccionada es la est&aacute;ndar.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Rellenar con los datos:</p>
+
+<p>Nombre: Pepito</p>
+
+<p>Apellido/s: Grillo</p>
+
+<p>DNI/NIF: 12345678A</p>
+
+<p>Tel&eacute;fono: 123456789</p>
+
+<p>Correo: pgrillo@fakemail.com</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute; datos:</p>
+
+<p>Nombre: Pepito</p>
+
+<p>Apellido/s: Grillo</p>
+
+<p>DNI/NIF: 12345678A</p>
+
+<p>Tel&eacute;fono: 123456789</p>
+
+<p>Correo: pgrillo@fakemail.com</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>Seleccionar descuentos y ayudas.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se abre la secci&oacute;n de descuentos y ayudas.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[11]]></step_number>
+	<actions><![CDATA[<p>Escanear el codigo de descuento.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Descuento aceptado.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[12]]></step_number>
+	<actions><![CDATA[<p>Seleccionar&nbsp;m&eacute;todo&nbsp;pago:&nbsp;Met&aacute;lico.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Mostrar&aacute;&nbsp;la pantalla de metalico con el precio 2,55&euro;.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[13]]></step_number>
+	<actions><![CDATA[<p>Introducir billete de 5&euro; en la maquina.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>La pantalla muestra la informacion del pago:</p>
+
+<p>Precio: 3,40&euro;</p>
+
+<p>Descuento -0,85&euro;</p>
+
+<p>Introducido: 5&euro;</p>
+
+<p>Cambio: 2,45&euro;</p>
+
+<p>Y devuelve 2,45&euro; de cambio.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite></testsuite><testsuite id="294" name="Impresión del billete" >
+<node_order><![CDATA[2]]></node_order>
+<details><![CDATA[<p>Informacion que ha de contener el billete para ser totalmente funcional</p>
+]]></details> 
+
+<testcase internalid="295" name="Datos del billete">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[9]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>El billete se debe imprimir con los siguientes datos.</p>
+
+<p>{localizador del billete}</p>
+
+<p>{nombre} {apellidos}&nbsp; {DNI/NIE}</p>
+
+<p>{tipo de tren}</p>
+
+<p>Origen: {origen} {fecha salida} {hora salida}</p>
+
+<p>Llegada: {Destino} {fecha llegada} {hora llegada}</p>
+
+<p>Coche:{n&uacute;mero vag&oacute;n}</p>
+
+<p>Plaza:{plaza}</p>
+
+<p>N&ordm; Billete:&nbsp;{identificador del billete}</p>
+
+<p>M&eacute;todo de pago: {m&eacute;todo de pago}</p>
+
+<p>{tarifa}</p>
+
+<p>Importe: {importe}</p>
+
+<p>Adquisici&oacute;n: {fecha adquisici&oacute;n} {hora adquisici&oacute;n}</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Tocar pantalla.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se muestra el men&uacute;&nbsp;de selecci&oacute;n.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Seleccionar imprimir billete.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>La interfaz muestra la pantalla para introducir el&nbsp;localizador del billete.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Introducir localizador del billete.</p>
+
+<p>MD6STW</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Muestra el localizador introducido (enmascarado en caracteres).</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Seleccionas aceptar.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Muestra:</p>
+
+<p>Fecha: 26/04/2024</p>
+
+<p>Origen: Figueres</p>
+
+<p>Destino: Portbou</p>
+
+<p>Hora: 8:27</p>
+
+<p>Coche: 06</p>
+
+<p>Plaza: 1A</p>
+
+<p>Tren: 00194</p>
+
+<p>Clase:Turista</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Seleccionar imprimir.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>La interfaz muestra el estado de impresi&oacute;n y el billete se imprime con:</p>
+
+<p>MD6STW</p>
+
+<p>Pepito grillo&nbsp;&nbsp;12345678A</p>
+
+<p>Regional</p>
+
+<p>Origen: Figueres&nbsp; 26/04/2024&nbsp; 8:27</p>
+
+<p>Destino: Figueres&nbsp; 26/04/2024&nbsp; 8:51</p>
+
+<p>Coche: 06</p>
+
+<p>Plaza: 1A</p>
+
+<p>N&ordm; Billete:&nbsp;146A15B1F6111F07</p>
+
+<p>M&eacute;todo de pago: Metalico</p>
+
+<p>Basico</p>
+
+<p>Importe: 2,50</p>
+
+<p>Adquisici&oacute;n: 26/04/2024&nbsp; 08:02:34</p>
+
+<p>&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Funciones de la maquina]]></req_spec_title>
+			<doc_id><![CDATA[RF 3.2]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Impresion del billete]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite><testsuite id="391" name="Sesión de usuario" >
+<node_order><![CDATA[3]]></node_order>
+<details><![CDATA[<p>Suite de pruebas de la sesi&oacute;n de usuario.</p>
+]]></details> 
+
+<testcase internalid="395" name="Inicio de sesion">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[15]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Prueba de flujo del inicio de sesi&oacute;n.</p>
+
+<p>Las&nbsp;pruebas&nbsp;ok y&nbsp;ko&nbsp;se hacen con&nbsp;soapUI&nbsp;y la de&nbsp;estr&eacute;s&nbsp;con&nbsp;jmeter.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Interactuar con la pantalla.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se muestra el&nbsp;men&uacute;&nbsp;principal.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>introducir usuario: UserTest@6735489&nbsp; contrase&ntilde;a: P@$$w0rd</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se muestra el men&uacute; de usuario.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Subsistema del punto de venta]]></req_spec_title>
+			<doc_id><![CDATA[1RNF 1.6]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Sesion de usuario]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+</testsuite></testsuite>
