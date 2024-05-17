@@ -17,11 +17,13 @@
 			</custom_field>
 		</custom_fields>
 <req_spec title="Subsistema de pasajero"  doc_id="SP 1"  >
-	<revision><![CDATA[2]]></revision>
+	<revision><![CDATA[3]]></revision>
 	<type><![CDATA[1]]></type>
 	<node_order><![CDATA[0]]></node_order>
 	<total_req><![CDATA[0]]></total_req>
-	<scope><![CDATA[<p>Todo con lo que el pasajero puede interactuar para poder conseguir&nbsp;su billete de tren.</p>]]></scope>
+	<scope><![CDATA[<p>Todo con lo que el pasajero puede interactuar para poder conseguir&nbsp;su billete de tren.</p>
+
+<p><img alt="Diagrama usuario" src="https://wade079.synology.me/lib/attachments/attachmentdownload.php?id=8" style="height:273px; width:300px" /></p>]]></scope>
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Especificacion]]></name>
@@ -36,9 +38,11 @@
 		<docid><![CDATA[1RF 1.0]]></docid>
 		<title><![CDATA[Idiomas disponibles]]></title>
 		<version>1</version>
-		<revision>3</revision>
+		<revision>4</revision>
 		<node_order>0</node_order>
-		<description><![CDATA[<p>Se ha de poder seleccionar un idioma para poder interactuar con la interfaz grafica de la maquina de vending de renfe.</p>]]></description>
+		<description><![CDATA[<p>Se ha de poder seleccionar un idioma para poder interactuar con la interfaz grafica de la maquina de vending de renfe.</p>
+
+<p><img alt="Selector de idiomas" src="https://wade079.synology.me/lib/attachments/attachmentdownload.php?id=1" style="float:left; height:156px; width:225px" /></p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
 		<expected_coverage><![CDATA[1]]></expected_coverage>
@@ -69,9 +73,11 @@
 		<docid><![CDATA[1RF 1.1]]></docid>
 		<title><![CDATA[Ruta]]></title>
 		<version>1</version>
-		<revision>2</revision>
+		<revision>3</revision>
 		<node_order>1</node_order>
-		<description><![CDATA[<p>El pasajero ha&nbsp;de ser capaz de consultar y elegir las rutas disponibles en el trayecto del tren que pasa por su region y otras.</p>]]></description>
+		<description><![CDATA[<p>El pasajero ha&nbsp;de ser capaz de consultar y elegir las rutas disponibles en el trayecto del tren que pasa por su region y otras.</p>
+
+<p><img alt="Diagrama Destinos" src="https://wade079.synology.me/lib/attachments/attachmentdownload.php?id=2" style="float:left; height:191px; width:636px" /></p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
 		<expected_coverage><![CDATA[1]]></expected_coverage>
@@ -103,9 +109,11 @@
 		<docid><![CDATA[1RF 1.2]]></docid>
 		<title><![CDATA[Horario]]></title>
 		<version>1</version>
-		<revision>4</revision>
+		<revision>5</revision>
 		<node_order>2</node_order>
-		<description><![CDATA[<p>El pasajero ha de ser capaz de consultar y elegir las fechas y horarios para una ruta determinada.</p>]]></description>
+		<description><![CDATA[<p>El pasajero ha de ser capaz de consultar y elegir las fechas y horarios para una ruta determinada.</p>
+
+<p><img alt="" src="https://wade079.synology.me/lib/attachments/attachmentdownload.php?id=3" style="float:left; height:420px; width:605px" /></p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
 		<expected_coverage><![CDATA[1]]></expected_coverage>
@@ -135,42 +143,14 @@
 
 	</requirement>
 	<requirement>
-		<docid><![CDATA[RF 2.2]]></docid>
-		<title><![CDATA[Seleccionar metodo de pago]]></title>
-		<version>1</version>
-		<revision>1</revision>
-		<node_order>2</node_order>
-		<description><![CDATA[<p>El usuario debe seleccionar <strong>como </strong>va a pagar para poder recibir el billete.</p>]]></description>
-		<status><![CDATA[D]]></status>
-		<type><![CDATA[3]]></type>
-		<expected_coverage><![CDATA[1]]></expected_coverage>
-		<custom_fields>
-			<custom_field>
-			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Ejecucion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-		</custom_fields>
-
-	</requirement>
-	<requirement>
-		<docid><![CDATA[1RF 1.55]]></docid>
+		<docid><![CDATA[1RF 1.3]]></docid>
 		<title><![CDATA[Tarifas disponibles]]></title>
 		<version>1</version>
-		<revision>3</revision>
+		<revision>8</revision>
 		<node_order>3</node_order>
-		<description><![CDATA[<p>En la maquina ha&nbsp;de haber una serie de tarifas y promociones que pueda escoger el pasajero, en base a ciertas circunstancias.</p>]]></description>
+		<description><![CDATA[<p>En la maquina ha&nbsp;de haber una serie de tarifas y promociones que pueda escoger el pasajero, en base a ciertas circunstancias.</p>
+
+<p><img alt="Diagrama Precios Tarifa" src="https://wade079.synology.me/lib/attachments/attachmentdownload.php?id=4" style="float:left; height:207px; width:300px" /></p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
 		<expected_coverage><![CDATA[1]]></expected_coverage>
@@ -186,8 +166,9 @@
 			<custom_field>
 			<name><![CDATA[Criterios de aceptacion]]></name>
 			<value><![CDATA[Las tarifas y promociones, como base, han de contener:
--Descuentos segun edad u oferta temporal.
--Viajes en dos trenes o mas, con un precio mas barato.]]></value>
+-Precio base
+-Descuentos u oferta temporal.
+]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Ejecucion]]></name>
@@ -197,12 +178,14 @@
 
 	</requirement>
 	<requirement>
-		<docid><![CDATA[1RF 1.33]]></docid>
-		<title><![CDATA[Sacar billete]]></title>
+		<docid><![CDATA[1RF 1.3.1]]></docid>
+		<title><![CDATA[Rellenar formulario datos de pasajero]]></title>
 		<version>1</version>
-		<revision>3</revision>
+		<revision>5</revision>
 		<node_order>4</node_order>
-		<description><![CDATA[<p>El pasajero debe ser capaza de una vez elegido ruta y horario terminar de sacar el billete rellenandolo con sus datos.</p>]]></description>
+		<description><![CDATA[<p>El pasajero tiene que rellenar un formulario con sus datos personales segun el tren que escoja y la tarifa aplicada.</p>
+
+<p><img alt="Formulario Datos Pasajero" src="https://wade079.synology.me/lib/attachments/attachmentdownload.php?id=5" style="float:left; height:241px; width:400px" /></p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
 		<expected_coverage><![CDATA[1]]></expected_coverage>
@@ -233,10 +216,40 @@
 	</requirement>
 	<requirement>
 		<docid><![CDATA[1RF 1.4]]></docid>
+		<title><![CDATA[Metodos de pago]]></title>
+		<version>1</version>
+		<revision>2</revision>
+		<node_order>5</node_order>
+		<description><![CDATA[<p>En la maquina de vending de billetes de renfe han de haber distintos metodos de pago para poder adquirir el billete de tren.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[3]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[C]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[El pasajero ha de poder elegir entre varias formas de pagar el billete. Ya sea en efectivo, por tarjeta (insertándola o pasándola por encima), mediante una tarjeta de socio Renfe, bizum y futuras formas de paga que se desarrollen con el paso del tiempo.]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+	<requirement>
+		<docid><![CDATA[1RF 1.5]]></docid>
 		<title><![CDATA[Imprimir billete]]></title>
 		<version>1</version>
-		<revision>5</revision>
-		<node_order>5</node_order>
+		<revision>7</revision>
+		<node_order>6</node_order>
 		<description><![CDATA[<p>El pasajero debe ser capaz de imprimir el billete de tren.</p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
@@ -263,10 +276,89 @@ Localizador del billete, Nombre, Apellido/s, DNI/NIE, tipo de tren, origen, fech
 		</custom_fields>
 
 	</requirement>
+	<requirement>
+		<docid><![CDATA[1RF 1.6]]></docid>
+		<title><![CDATA[Flujo]]></title>
+		<version>1</version>
+		<revision>4</revision>
+		<node_order>7</node_order>
+		<description><![CDATA[<ol>
+	<li>Seleccionar idioma</li>
+	<li>Seleccionar tren</li>
+	<li>Seleccionar destino
+	<ol>
+		<li>Seleccionar fecha</li>
+		<li>Seleccionar asiento</li>
+	</ol>
+	</li>
+	<li>Seleccionar tarifa</li>
+	<li>Rellenar datos</li>
+	<li>Seleccionar metodo de pago</li>
+</ol>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[3]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Alta]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[C]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[El resultado del flujo debería verse así:
+1.Español
+2.Media Distancia
+3.Girona
+3.1 4 de Junio a las 16:26
+3.2 Vagon 2 asiento 4C
+5. Carlos Lain,475894F,555999777,hola@gmail.com
+]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
+	<requirement>
+		<docid><![CDATA[1RF 1.7]]></docid>
+		<title><![CDATA[Sacar Billete]]></title>
+		<version>1</version>
+		<revision>2</revision>
+		<node_order>8</node_order>
+		<description><![CDATA[<p>Despues de imprimir el billete, se tendra que sacar.</p>]]></description>
+		<status><![CDATA[D]]></status>
+		<type><![CDATA[3]]></type>
+		<expected_coverage><![CDATA[1]]></expected_coverage>
+		<custom_fields>
+			<custom_field>
+			<name><![CDATA[Prioridad Requisito]]></name>
+			<value><![CDATA[Baja]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Riesgo Requisito]]></name>
+			<value><![CDATA[A]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Criterios de aceptacion]]></name>
+			<value><![CDATA[Sí o sí hay que sacar el billete para poder acceder al tren. Si no, será caso de multa el no tener ninguna evidencia física o digital de que se adquirió anteriormente.]]></value>
+			</custom_field>
+			<custom_field>
+			<name><![CDATA[Ejecucion]]></name>
+			<value><![CDATA[]]></value>
+			</custom_field>
+		</custom_fields>
+
+	</requirement>
 <req_spec title="Historias de usuario"  doc_id="RF 1 HU"  >
 	<revision><![CDATA[1]]></revision>
 	<type><![CDATA[1]]></type>
-	<node_order><![CDATA[6]]></node_order>
+	<node_order><![CDATA[9]]></node_order>
 	<total_req><![CDATA[0]]></total_req>
 	<scope><![CDATA[]]></scope>
 		<custom_fields>
@@ -316,35 +408,112 @@ Localizador del billete, Nombre, Apellido/s, DNI/NIE, tipo de tren, origen, fech
 		<type>1</type>
 	</relation>
 	<relation>
+		<source>1RF 1.6</source>
+		<destination>1RF 1.0</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>RF 2.2.2</source>
+		<destination>1RF 1.0</destination>
+		<type>3</type>
+	</relation>
+	<relation>
 		<source>1RF 1.2</source>
 		<destination>1RF 1.1</destination>
 		<type>3</type>
 	</relation>
 	<relation>
-		<source>1RF 1.33</source>
+		<source>1RF 1.6</source>
+		<destination>1RF 1.1</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>1RF 1.3.1</source>
+		<destination>1RF 1.2</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>1RF 1.6</source>
 		<destination>1RF 1.2</destination>
 		<type>3</type>
 	</relation>
 	<relation>
 		<source>1RF 1.4</source>
-		<destination>1RF 1.33</destination>
+		<destination>1RF 1.3</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>1RF 1.6</source>
+		<destination>1RF 1.3</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>RF 2.2.4</source>
+		<destination>1RF 1.3</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>1RF 1.6</source>
+		<destination>1RF 1.3.1</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>1RF 1.5</source>
+		<destination>1RF 1.4</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>1RF 1.6</source>
+		<destination>1RF 1.4</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>RF 2.2.1</source>
+		<destination>1RF 1.4</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>RF 3.3</source>
+		<destination>1RF 1.4</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>RF 3.5</source>
+		<destination>1RF 1.4</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>RF 3.1</source>
+		<destination>1RF 1.4</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>1RF 1.6</source>
+		<destination>1RF 1.5</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>RF 2.6</source>
+		<destination>1RF 1.6</destination>
 		<type>3</type>
 	</relation>
 </req_spec>
 <req_spec title="Subsistema de taquillero"  doc_id="ST 1"  >
-	<revision><![CDATA[1]]></revision>
+	<revision><![CDATA[2]]></revision>
 	<type><![CDATA[1]]></type>
 	<node_order><![CDATA[1]]></node_order>
 	<total_req><![CDATA[0]]></total_req>
-	<scope><![CDATA[]]></scope>
+	<scope><![CDATA[<p>Rol del taquillero de turno que est&eacute; en la estaci&oacute;n de tren de Renfe relacionado al cuidado de la maquina de vending de billetes.</p>
+
+<p><img alt="Diagrama taquillero" src="https://wade079.synology.me/lib/attachments/attachmentdownload.php?id=9" style="height:203px; width:300px" /></p>]]></scope>
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Especificacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Media]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Riesgo Especificacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[B]]></value>
 			</custom_field>
 		</custom_fields>
 	<requirement>
@@ -424,78 +593,6 @@ Localizador del billete, Nombre, Apellido/s, DNI/NIE, tipo de tren, origen, fech
 			<value><![CDATA[]]></value>
 			</custom_field>
 		</custom_fields>
-	<requirement>
-		<docid><![CDATA[RF 2.1]]></docid>
-		<title><![CDATA[Seleccionar destino]]></title>
-		<version>1</version>
-		<revision>2</revision>
-		<node_order>1</node_order>
-		<description><![CDATA[<p>La interfaz le mostrar&aacute; diferentes destinos a elegir.<img alt="" src="http://localhost:9080/lib/attachments/attachmentdownload.php?id=5" style="height:382px; width:1271px" /></p>]]></description>
-		<status><![CDATA[D]]></status>
-		<type><![CDATA[3]]></type>
-		<expected_coverage><![CDATA[1]]></expected_coverage>
-		<custom_fields>
-			<custom_field>
-			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[Alta]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[C]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[El usuario puede seleccionar el destino]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Ejecucion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-		</custom_fields>
-
-	</requirement>
-	<requirement>
-		<docid><![CDATA[RF 2.5]]></docid>
-		<title><![CDATA[Flujo]]></title>
-		<version>1</version>
-		<revision>2</revision>
-		<node_order>5</node_order>
-		<description><![CDATA[<ol>
-	<li>Seleccionar idioma</li>
-	<li>Seleccionar tren</li>
-	<li>Seleccionar destino
-	<ol>
-		<li>Seleccionar fecha</li>
-		<li>Seleccionar asiento</li>
-	</ol>
-	</li>
-	<li>Seleccionar tarifa</li>
-	<li>Rellenar datos</li>
-	<li>Seleccionar metodo de pago</li>
-</ol>]]></description>
-		<status><![CDATA[D]]></status>
-		<type><![CDATA[3]]></type>
-		<expected_coverage><![CDATA[1]]></expected_coverage>
-		<custom_fields>
-			<custom_field>
-			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[NV]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[NV]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Ejecucion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-		</custom_fields>
-
-	</requirement>
 <req_spec title="Historias de usuario"  doc_id="RF 2 HU"  >
 	<revision><![CDATA[1]]></revision>
 	<type><![CDATA[1]]></type>
@@ -632,6 +729,21 @@ Localizador del billete, Nombre, Apellido/s, DNI/NIE, tipo de tren, origen, fech
 		</custom_fields>
 
 	</requirement>
+	<relation>
+		<source>RF 2.2.1</source>
+		<destination>1RF 1.4</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>RF 2.2.2</source>
+		<destination>1RF 1.0</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>RF 2.2.4</source>
+		<destination>1RF 1.3</destination>
+		<type>3</type>
+	</relation>
 </req_spec>
 	<requirement>
 		<docid><![CDATA[RF 2.6]]></docid>
@@ -663,75 +775,52 @@ Localizador del billete, Nombre, Apellido/s, DNI/NIE, tipo de tren, origen, fech
 		</custom_fields>
 
 	</requirement>
-	<requirement>
-		<docid><![CDATA[RF 2.7]]></docid>
-		<title><![CDATA[Sacar Billete]]></title>
-		<version>1</version>
-		<revision>1</revision>
-		<node_order>8</node_order>
-		<description><![CDATA[<p>Despues de imprimir el billete, se tendra que sacar.</p>]]></description>
-		<status><![CDATA[D]]></status>
-		<type><![CDATA[3]]></type>
-		<expected_coverage><![CDATA[1]]></expected_coverage>
-		<custom_fields>
-			<custom_field>
-			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-			<custom_field>
-			<name><![CDATA[Ejecucion]]></name>
-			<value><![CDATA[]]></value>
-			</custom_field>
-		</custom_fields>
-
-	</requirement>
+	<relation>
+		<source>RF 2.6</source>
+		<destination>1RF 1.6</destination>
+		<type>3</type>
+	</relation>
 </req_spec>
 <req_spec title="Subsistema de metodos de pago"  doc_id="SMP 1"  >
-	<revision><![CDATA[1]]></revision>
+	<revision><![CDATA[3]]></revision>
 	<type><![CDATA[1]]></type>
 	<node_order><![CDATA[2]]></node_order>
 	<total_req><![CDATA[0]]></total_req>
-	<scope><![CDATA[]]></scope>
+	<scope><![CDATA[<p>M&eacute;todos de pago disponibles en la m&aacute;quina de vending de billetes de renfe. Sin estas, no se puede comprar el billete.</p>
+
+<p><img alt="Diagrama Metodos de Pago Disponibles" src="https://wade079.synology.me/lib/attachments/attachmentdownload.php?id=7" style="float:left; height:262px; width:300px" /></p>]]></scope>
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Especificacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Alta]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Riesgo Especificacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[C]]></value>
 			</custom_field>
 		</custom_fields>
 	<requirement>
 		<docid><![CDATA[1RF 3.1]]></docid>
 		<title><![CDATA[Metalico]]></title>
 		<version>1</version>
-		<revision>1</revision>
+		<revision>2</revision>
 		<node_order>1</node_order>
-		<description><![CDATA[<p>El&nbsp;sistema&nbsp;ha de ser capaz de verificar,&nbsp;aceptar y devolver el cambio de los pagos en&nbsp;met&aacute;lico.</p>]]></description>
+		<description><![CDATA[<p>El&nbsp;sistema&nbsp;ha de ser capaz de verificar,&nbsp;aceptar y devolver el cambio de los pagos en&nbsp;met&aacute;lico. Habr&aacute; un l&iacute;mite de qu&eacute; tipos de billete se aceptan seg&uacute;n el precio a cobrar (por ej: 6,30&euro; siendo usado un billete de 100&euro; ser&aacute; denegado y devolver&aacute; el billete inmediatamente).</p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
 		<expected_coverage><![CDATA[1]]></expected_coverage>
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Alta]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[C]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[La máquina ha de tener con antelación mucho cambio para poder trabajar durante un largo periodo de tiempo, sin necesidad de revisar de forma diaria cuánto dinero le queda disponible para devolver, y rellenarlo.]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Ejecucion]]></name>
@@ -742,28 +831,30 @@ Localizador del billete, Nombre, Apellido/s, DNI/NIE, tipo de tren, origen, fech
 	</requirement>
 	<requirement>
 		<docid><![CDATA[1RF 3.2]]></docid>
-		<title><![CDATA[Targeta]]></title>
+		<title><![CDATA[Tarjeta]]></title>
 		<version>1</version>
-		<revision>1</revision>
+		<revision>2</revision>
 		<node_order>2</node_order>
 		<description><![CDATA[<p>El sistema debe poder recibir pagos en tarjeta de&nbsp;cr&eacute;dito.<br />
 <br />
-El sistema debe tener integrado un&nbsp;TPV(terminal punto de venta) que sea capaz de leer una tarjeta y tenga conexi&oacute;n con la entidad bancaria.</p>]]></description>
+El sistema debe tener integrado un&nbsp;TPV(terminal punto de venta) que sea capaz de leer una tarjeta y tenga conexi&oacute;n con el centro de pagos de renfe.</p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
 		<expected_coverage><![CDATA[1]]></expected_coverage>
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Alta]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[B]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[El pago con tarjeta, que a parte siempre te tiene que pedir el codigo PIN de verificación ,debería de poder hacerse de dos formas:
+-Introduciendo la tarjeta en el tpv
+-Por contactless, pasándola por encima del sensor del tpv]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Ejecucion]]></name>
@@ -776,7 +867,7 @@ El sistema debe tener integrado un&nbsp;TPV(terminal punto de venta) que sea cap
 		<docid><![CDATA[1RF 3.3]]></docid>
 		<title><![CDATA[Wireless]]></title>
 		<version>1</version>
-		<revision>1</revision>
+		<revision>2</revision>
 		<node_order>3</node_order>
 		<description><![CDATA[<p>El TPV debe poder aceptar el pago por tarjeta wireless y las aplicaciones de movil de pago wireless.</p>]]></description>
 		<status><![CDATA[D]]></status>
@@ -785,15 +876,15 @@ El sistema debe tener integrado un&nbsp;TPV(terminal punto de venta) que sea cap
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Alta]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[B]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[El pago siempre ha de pedir el codigo PIN luego de pasar la tarjeta o el movil.]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Ejecucion]]></name>
@@ -806,7 +897,7 @@ El sistema debe tener integrado un&nbsp;TPV(terminal punto de venta) que sea cap
 		<docid><![CDATA[1RF 3.4]]></docid>
 		<title><![CDATA[QR]]></title>
 		<version>1</version>
-		<revision>1</revision>
+		<revision>2</revision>
 		<node_order>4</node_order>
 		<description><![CDATA[<p>El TPV debe poder&nbsp;recibir&nbsp;pagos por&nbsp;c&oacute;digos&nbsp;QR generado por algunas aplicaciones de pago.</p>]]></description>
 		<status><![CDATA[D]]></status>
@@ -815,15 +906,15 @@ El sistema debe tener integrado un&nbsp;TPV(terminal punto de venta) que sea cap
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Alta]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[B]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Con tan solo escanear el QR en el lector infrarrojo, debería de verificar que no haya sido utilizado, y aceptar el pago.]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Ejecucion]]></name>
@@ -883,24 +974,28 @@ El sistema debe tener integrado un&nbsp;TPV(terminal punto de venta) que sea cap
 		<docid><![CDATA[RF 3.1]]></docid>
 		<title><![CDATA[Cobro del metodo de pago]]></title>
 		<version>1</version>
-		<revision>1</revision>
+		<revision>2</revision>
 		<node_order>3</node_order>
-		<description><![CDATA[<p>La maquina cobra el pago</p>]]></description>
+		<description><![CDATA[<p>La maquina cobra el importe del billete segun el m&eacute;todo de pago seleccionado.</p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
 		<expected_coverage><![CDATA[1]]></expected_coverage>
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Alta]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[A]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Los métodos de pago han de ser:
+-Tarjeta
+-Metálico
+-Wireless
+-QR]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Ejecucion]]></name>
@@ -910,19 +1005,21 @@ El sistema debe tener integrado un&nbsp;TPV(terminal punto de venta) que sea cap
 
 	</requirement>
 <req_spec title="Tipos de billete"  doc_id="RF 3 TB"  >
-	<revision><![CDATA[1]]></revision>
+	<revision><![CDATA[4]]></revision>
 	<type><![CDATA[1]]></type>
 	<node_order><![CDATA[4]]></node_order>
 	<total_req><![CDATA[0]]></total_req>
-	<scope><![CDATA[<p>Los distintos tipos de billete que puede imprimir la maquina.</p>]]></scope>
+	<scope><![CDATA[<p>Los datos de los distintos tipos de billete que puede imprimir la maquina segun el tren a escoger.</p>
+
+<p><img alt="Diagrama Tipos de Billete" src="https://wade079.synology.me/lib/attachments/attachmentdownload.php?id=6" style="height:163px; width:300px" /></p>]]></scope>
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Especificacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Alta]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Riesgo Especificacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[A]]></value>
 			</custom_field>
 		</custom_fields>
 <req_spec title="Tipos de Billete Avant y Media Distancia"  doc_id="RF 3.1 TP A MD"  >
@@ -1281,7 +1378,7 @@ El sistema debe tener integrado un&nbsp;TPV(terminal punto de venta) que sea cap
 		<docid><![CDATA[RF 3.3]]></docid>
 		<title><![CDATA[Cobro Aceptado]]></title>
 		<version>1</version>
-		<revision>1</revision>
+		<revision>2</revision>
 		<node_order>5</node_order>
 		<description><![CDATA[<p>La maquina acepta el cobro. Puede proceder a imprimir el billete.</p>]]></description>
 		<status><![CDATA[D]]></status>
@@ -1290,15 +1387,15 @@ El sistema debe tener integrado un&nbsp;TPV(terminal punto de venta) que sea cap
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Alta]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[C]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[La máquina tiene que confirmar con la central de pagos de que el método de pago (tarjeta, wireless, qr) es correcto. En metálico, ha de confirmar de que el dinero entregado sea verídico.]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Ejecucion]]></name>
@@ -1367,6 +1464,21 @@ El sistema debe tener integrado un&nbsp;TPV(terminal punto de venta) que sea cap
 		</custom_fields>
 
 	</requirement>
+	<relation>
+		<source>RF 3.1</source>
+		<destination>1RF 1.4</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>RF 3.3</source>
+		<destination>1RF 1.4</destination>
+		<type>3</type>
+	</relation>
+	<relation>
+		<source>RF 3.5</source>
+		<destination>1RF 1.4</destination>
+		<type>3</type>
+	</relation>
 </req_spec>
 <req_spec title="Billete"  doc_id="1 B"  >
 	<revision><![CDATA[1]]></revision>
@@ -1598,20 +1710,20 @@ Localizador]]></value>
 		<docid><![CDATA[1RNF 1.3]]></docid>
 		<title><![CDATA[Conexion de red]]></title>
 		<version>1</version>
-		<revision>1</revision>
+		<revision>2</revision>
 		<node_order>3</node_order>
-		<description><![CDATA[<p>La maquinaria debe estar conectada a la red para comunicarse con la red de la empresa y con los medios de pago.</p>]]></description>
+		<description><![CDATA[<p>La maquinaria debe estar conectada a la red interna de renfe para comunicarse con la red de la empresa y con los medios de pago.</p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
 		<expected_coverage><![CDATA[1]]></expected_coverage>
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Alta]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[A]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Criterios de aceptacion]]></name>
@@ -2282,7 +2394,7 @@ Solo el personal autorizado&nbsp;deber&iacute;a&nbsp;poder acceder.</p>]]></desc
 		<docid><![CDATA[RNF 3]]></docid>
 		<title><![CDATA[Idiomas Disponibles]]></title>
 		<version>1</version>
-		<revision>1</revision>
+		<revision>2</revision>
 		<node_order>8</node_order>
 		<description><![CDATA[<p>Toda maquina debe de contener los idiomas oficiales hablados en espa&ntilde;a. A mas de tener idiomas extranjeros por el turismo (Frances, Ingles y Aleman como minimo).</p>]]></description>
 		<status><![CDATA[D]]></status>
@@ -2291,15 +2403,19 @@ Solo el personal autorizado&nbsp;deber&iacute;a&nbsp;poder acceder.</p>]]></desc
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Baja]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[A]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Criterios de aceptacion]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Los idiomas que ha de tener, como minimo, son:
+-Catalán
+-Castellano
+-Francés
+-Inglés]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Ejecucion]]></name>
@@ -2312,20 +2428,20 @@ Solo el personal autorizado&nbsp;deber&iacute;a&nbsp;poder acceder.</p>]]></desc
 		<docid><![CDATA[RNF 4]]></docid>
 		<title><![CDATA[Revision y reposicion billetes disponibles]]></title>
 		<version>1</version>
-		<revision>1</revision>
+		<revision>2</revision>
 		<node_order>9</node_order>
-		<description><![CDATA[<p>Se tendra que ver la cantidad de billetes que quedan disponibles en la maquina para ir reponiendo y que no se quede sin nada.</p>]]></description>
+		<description><![CDATA[<p>Se tendra que revisar&nbsp;la cantidad de billetes que quedan disponibles en la maquina para ir reponiendo y que no se quede sin nada.</p>]]></description>
 		<status><![CDATA[D]]></status>
 		<type><![CDATA[3]]></type>
 		<expected_coverage><![CDATA[1]]></expected_coverage>
 		<custom_fields>
 			<custom_field>
 			<name><![CDATA[Prioridad Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[Baja]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Riesgo Requisito]]></name>
-			<value><![CDATA[]]></value>
+			<value><![CDATA[A]]></value>
 			</custom_field>
 			<custom_field>
 			<name><![CDATA[Criterios de aceptacion]]></name>

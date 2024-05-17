@@ -139,8 +139,8 @@
 </steps>
 	<requirements>
 		<requirement>
-			<req_spec_title><![CDATA[Opciones del usuario]]></req_spec_title>
-			<doc_id><![CDATA[RF 2.5]]></doc_id>
+			<req_spec_title><![CDATA[Subsistema de pasajero]]></req_spec_title>
+			<doc_id><![CDATA[1RF 1.6]]></doc_id>
 			<version><![CDATA[1]]></version>
 			<title><![CDATA[Flujo]]></title>
 		</requirement>
@@ -760,6 +760,8 @@
 	<version><![CDATA[1]]></version>
 	<summary><![CDATA[<p>El billete se debe imprimir con los siguientes datos.</p>
 
+<p>La prueba es gravada en seleniumIDE y su carga en Jmeter.</p>
+
 <p>{localizador del billete}</p>
 
 <p>{nombre} {apellidos}&nbsp; {DNI/NIE}</p>
@@ -789,7 +791,7 @@
 <p>&nbsp;</p>
 ]]></summary>
 	<preconditions><![CDATA[]]></preconditions>
-	<execution_type><![CDATA[1]]></execution_type>
+	<execution_type><![CDATA[2]]></execution_type>
 	<importance><![CDATA[2]]></importance>
 	<estimated_exec_duration></estimated_exec_duration>
 	<status>1</status>
@@ -896,19 +898,17 @@
 </testcase>
 </testsuite><testsuite id="391" name="Sesión de usuario" >
 <node_order><![CDATA[3]]></node_order>
-<details><![CDATA[<p>Suite de pruebas de la sesi&oacute;n de usuario.</p>
+<details><![CDATA[<p>Suite de pruebas de inicio de&nbsp;sesi&oacute;n. Para comprobar el aguante de la m&aacute;quina seg&uacute;n la cantidad de personas interactuando a la vez.</p>
 ]]></details> 
 
 <testcase internalid="395" name="Inicio de sesion">
-	<node_order><![CDATA[1000]]></node_order>
+	<node_order><![CDATA[0]]></node_order>
 	<externalid><![CDATA[15]]></externalid>
 	<version><![CDATA[1]]></version>
-	<summary><![CDATA[<p>Prueba de flujo del inicio de sesi&oacute;n.</p>
-
-<p>Las&nbsp;pruebas&nbsp;ok y&nbsp;ko&nbsp;se hacen con&nbsp;soapUI&nbsp;y la de&nbsp;estr&eacute;s&nbsp;con&nbsp;jmeter.</p>
+	<summary><![CDATA[<p>Prueba de funcionalidad de autentificaci&oacute;n de sesi&oacute;n.</p>
 ]]></summary>
 	<preconditions><![CDATA[]]></preconditions>
-	<execution_type><![CDATA[2]]></execution_type>
+	<execution_type><![CDATA[1]]></execution_type>
 	<importance><![CDATA[2]]></importance>
 	<estimated_exec_duration></estimated_exec_duration>
 	<status>1</status>
@@ -926,9 +926,275 @@
 
 <step>
 	<step_number><![CDATA[2]]></step_number>
-	<actions><![CDATA[<p>introducir usuario: UserTest@6735489&nbsp; contrase&ntilde;a: P@$$w0rd</p>
+	<actions><![CDATA[<p>introducir usuario: adm@example.com&nbsp; contrase&ntilde;a: P@$$w0rd</p>
 ]]></actions>
 	<expectedresults><![CDATA[<p>Se muestra el men&uacute; de usuario.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Subsistema del punto de venta]]></req_spec_title>
+			<doc_id><![CDATA[1RNF 1.6]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Sesion de usuario]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+
+<testcase internalid="423" name="Prueba OK/KO">
+	<node_order><![CDATA[1]]></node_order>
+	<externalid><![CDATA[17]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Pruebas de autentificaci&oacute;n en soapUI</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Abrir SoapUI.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se abre el programa.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Abrir el web4testing.wadl</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se abre el proyecto.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>En api/login -&gt; POST -&gt; Reqest1 rellenar el json:</p>
+
+<p>{<br />
+&nbsp; &quot;username&quot;: &quot;adm@example.com&quot;,<br />
+&nbsp; &quot;password&quot;: &quot;P@$$w0rd&quot;<br />
+}</p>
+
+<p>y ejecutar la petici&oacute;n.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>El json resultante contiene un success: true</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>En api/login -&gt; POST -&gt; Request1 crear&nbsp;un nuevo caso de prueba.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se abre la panatalla de suite de prueba.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>Crear la suite de authentification y el caso de prueba OK.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Aparece el nuevo caso de prueba.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>A&ntilde;adir las aserciones:</p>
+
+<p>-Valid HTTP status codes: 200</p>
+
+<p>-Specify JsonPath Match:</p>
+
+<p>&nbsp; &nbsp; -JsonPath expression:&nbsp;$.success</p>
+
+<p>&nbsp; &nbsp; -Expected result: true</p>
+
+<p>-Specify JsonPath Existance Match:</p>
+
+<p>&nbsp; &nbsp; -JsonPath expression:&nbsp;$.token</p>
+
+<p>&nbsp; &nbsp; -Expected result: true</p>
+
+<p>&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Las aserciones se crean correctamente.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Ejecutar la prueba.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Las aserciones pasan la prueba con luz verde.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>A&ntilde;adir&nbsp;un nuevo caso de pruebas para la Request1&nbsp;en la misma suite y llamarlo KO.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se crea el caso de pruebas KO.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>Modificar el json:</p>
+
+<p>{<br />
+&nbsp; &quot;username&quot;: &quot;adm@exampie.com&quot;,<br />
+&nbsp; &quot;password&quot;: &quot;P@$$w0rd&quot;<br />
+}</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se cambia el json.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>A&ntilde;adir las aserciones:</p>
+
+<p>-Valid HTTP status codes: 200</p>
+
+<p>-Specify JsonPath Match:</p>
+
+<p>&nbsp; &nbsp; -JsonPath expression:&nbsp;$.success</p>
+
+<p>&nbsp; &nbsp; -Expected result: false</p>
+
+<p>-Not Contains: token</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Las aserciones se crean correctamente.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[11]]></step_number>
+	<actions><![CDATA[<p>Ejecutar la prueba.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Las aserciones pasan la prueba con luz verde.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+	<requirements>
+		<requirement>
+			<req_spec_title><![CDATA[Subsistema del punto de venta]]></req_spec_title>
+			<doc_id><![CDATA[1RNF 1.6]]></doc_id>
+			<version><![CDATA[1]]></version>
+			<title><![CDATA[Sesion de usuario]]></title>
+		</requirement>
+	</requirements>
+</testcase>
+
+<testcase internalid="417" name="Prueba de carga">
+	<node_order><![CDATA[2]]></node_order>
+	<externalid><![CDATA[16]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Prueba de carga de la autentificaci&oacute;n de sesi&oacute;n.<br />
+<br />
+Se simula la conexi&oacute;n de mil usuarios con un&nbsp;intervalo&nbsp;de cinco segundos y realizan la operaci&oacute;n tres veces.</p>
+]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Abrir jmeter.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se abre el programa.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Crear un nuevo plan de pruebas desde la plantilla de simple http request.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se&nbsp;abre la pantalla de&nbsp;par&aacute;metros.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Rellenar el apartado body con:</p>
+
+<p>{ &nbsp; &quot;username&quot;: &quot;adm@example.com&quot;, &nbsp; &quot;password&quot;: &quot;P@$$w0rd&quot; }</p>
+
+<p>El url con:</p>
+
+<p>http://localhost:8181/api/login</p>
+
+<p>Y pulsar crear.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>El plan de pruebas se crea.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>Seleccionar el grupo de hilos.</p>
+
+<p>&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se abre la pantalla de grupo de hilos.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>En thread properties rellenar con.</p>
+
+<p>Number of threads: 1000.</p>
+
+<p>Ramp-up period: 5.</p>
+
+<p>Loop count: 3.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se muestran los datos introducidos.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>A&ntilde;adir al plan de prueba el listener: Summary Report.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Aparece en el plan de pruebas el summary report.</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>Ejecutar el plan de pruebas.</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Se ejecuta sin errores.</p>
 ]]></expectedresults>
 	<execution_type><![CDATA[1]]></execution_type>
 </step>
